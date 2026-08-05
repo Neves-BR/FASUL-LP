@@ -183,6 +183,21 @@
         .animate-float {
             animation: float 3s ease-in-out infinite;
         }
+
+        /* Animação de transição das tags */
+        .cursos-container {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .cursos-container.fade-out {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        .cursos-container.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
     <base target="_blank">
 </head>
@@ -469,8 +484,8 @@
 
                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 md:gap-6">
                     <!-- Educação - Ativo -->
-                    <a href="#educacao"
-                        class="group flex flex-col items-center p-4 md:p-6 rounded-xl bg-cyan-400/10 border border-cyan-400/30 hover:bg-cyan-400/20 transition-all duration-300"
+                    <a href="#cursos-dinamico" data-categoria="educacao"
+                        class="categoria-btn group flex flex-col items-center p-4 md:p-6 rounded-xl bg-cyan-400/10 border border-cyan-400/30 hover:bg-cyan-400/20 transition-all duration-300"
                         aria-current="page" rel="noopener noreferrer">
                         <div
                             class="w-12 h-12 md:w-14 md:h-14 bg-cyan-400/20 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
@@ -480,12 +495,12 @@
                                     d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                             </svg>
                         </div>
-                        <span class="text-cyan-400 font-bold text-sm md:text-base text-center">Educação</span>
+                        <span class="categoria-nome text-cyan-400 font-bold text-sm md:text-base text-center">Educação</span>
                     </a>
 
                     <!-- Saúde -->
-                    <a href="#saude"
-                        class="group flex flex-col items-center p-4 md:p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300"
+                    <a href="#cursos-dinamico" data-categoria="saude"
+                        class="categoria-btn group flex flex-col items-center p-4 md:p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300"
                         rel="noopener noreferrer">
                         <div
                             class="w-12 h-12 md:w-14 md:h-14 bg-white/10 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
@@ -496,12 +511,12 @@
                             </svg>
                         </div>
                         <span
-                            class="text-gray-400 group-hover:text-cyan-400 font-medium text-sm md:text-base text-center transition-colors">Saúde</span>
+                            class="categoria-nome text-gray-400 group-hover:text-cyan-400 font-medium text-sm md:text-base text-center transition-colors">Saúde</span>
                     </a>
 
                     <!-- Gestão -->
-                    <a href="#gestao"
-                        class="group flex flex-col items-center p-4 md:p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300"
+                    <a href="#cursos-dinamico" data-categoria="gestao"
+                        class="categoria-btn group flex flex-col items-center p-4 md:p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300"
                         rel="noopener noreferrer">
                         <div
                             class="w-12 h-12 md:w-14 md:h-14 bg-white/10 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
@@ -512,12 +527,12 @@
                             </svg>
                         </div>
                         <span
-                            class="text-gray-400 group-hover:text-cyan-400 font-medium text-sm md:text-base text-center transition-colors">Gestão</span>
+                            class="categoria-nome text-gray-400 group-hover:text-cyan-400 font-medium text-sm md:text-base text-center transition-colors">Gestão</span>
                     </a>
 
                     <!-- Direito -->
-                    <a href="#direito"
-                        class="group flex flex-col items-center p-4 md:p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300"
+                    <a href="#cursos-dinamico" data-categoria="direito"
+                        class="categoria-btn group flex flex-col items-center p-4 md:p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300"
                         rel="noopener noreferrer">
                         <div
                             class="w-12 h-12 md:w-14 md:h-14 bg-white/10 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
@@ -528,12 +543,12 @@
                             </svg>
                         </div>
                         <span
-                            class="text-gray-400 group-hover:text-cyan-400 font-medium text-sm md:text-base text-center transition-colors">Direito</span>
+                            class="categoria-nome text-gray-400 group-hover:text-cyan-400 font-medium text-sm md:text-base text-center transition-colors">Direito</span>
                     </a>
 
                     <!-- Engenharia -->
-                    <a href="#engenharia"
-                        class="group flex flex-col items-center p-4 md:p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300"
+                    <a href="#cursos-dinamico" data-categoria="engenharia"
+                        class="categoria-btn group flex flex-col items-center p-4 md:p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300"
                         rel="noopener noreferrer">
                         <div
                             class="w-12 h-12 md:w-14 md:h-14 bg-white/10 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
@@ -544,12 +559,12 @@
                             </svg>
                         </div>
                         <span
-                            class="text-gray-400 group-hover:text-cyan-400 font-medium text-sm md:text-base text-center transition-colors">Engenharia</span>
+                            class="categoria-nome text-gray-400 group-hover:text-cyan-400 font-medium text-sm md:text-base text-center transition-colors">Engenharia</span>
                     </a>
 
                     <!-- Humanas -->
-                    <a href="#humanas"
-                        class="group flex flex-col items-center p-4 md:p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300"
+                    <a href="#cursos-dinamico" data-categoria="humanas"
+                        class="categoria-btn group flex flex-col items-center p-4 md:p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300"
                         rel="noopener noreferrer">
                         <div
                             class="w-12 h-12 md:w-14 md:h-14 bg-white/10 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
@@ -560,12 +575,12 @@
                             </svg>
                         </div>
                         <span
-                            class="text-gray-400 group-hover:text-cyan-400 font-medium text-sm md:text-base text-center transition-colors">Humanas</span>
+                            class="categoria-nome text-gray-400 group-hover:text-cyan-400 font-medium text-sm md:text-base text-center transition-colors">Humanas</span>
                     </a>
 
                     <!-- Tecnologia -->
-                    <a href="#tecnologia"
-                        class="group flex flex-col items-center p-4 md:p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300"
+                    <a href="#cursos-dinamico" data-categoria="tecnologia"
+                        class="categoria-btn group flex flex-col items-center p-4 md:p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300"
                         rel="noopener noreferrer">
                         <div
                             class="w-12 h-12 md:w-14 md:h-14 bg-white/10 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
@@ -576,411 +591,30 @@
                             </svg>
                         </div>
                         <span
-                            class="text-gray-400 group-hover:text-cyan-400 font-medium text-sm md:text-base text-center transition-colors">Tecnologia</span>
+                            class="categoria-nome text-gray-400 group-hover:text-cyan-400 font-medium text-sm md:text-base text-center transition-colors">Tecnologia</span>
                     </a>
                 </div>
             </div>
         </section>
 
         <!-- ============================================ -->
-        <!-- NUVEM DE TAGS/CURSOS (Educação)               -->
+        <!-- SEÇÃO DINÂMICA DE CURSOS (SUBSTITUI TODAS AS SEÇ�ÕES FIXAS) -->
         <!-- ============================================ -->
-        <!-- EDUCAÇÃO -->
-        <section id="educacao" class="py-12 md:py-16 bg-fasul-dark" aria-labelledby="cursos-educacao-title">
+        <section id="cursos-dinamico" class="py-12 md:py-16 bg-fasul-dark" aria-labelledby="cursos-dinamico-title">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 id="cursos-educacao-title" class="text-xl md:text-2xl font-bold text-white mb-8 text-center">
-                    Cursos de <span class="text-cyan-400">Educação</span>
+                <h2 id="cursos-dinamico-title" class="text-xl md:text-2xl font-bold text-white mb-8 text-center">
+                    Cursos de <span id="categoria-ativa-nome" class="text-cyan-400">Educação</span>
                 </h2>
 
-                <div class="flex flex-wrap justify-center gap-3 md:gap-4">
-                    <a href="/cursos/artes"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Artes</a>
-                    <a href="/cursos/educacao"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Educação</a>
-                    <a href="/cursos/educacao-basica"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Educação Básica</a>
-                    <a href="/cursos/educacao-especial"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Educação Especial</a>
-                    <a href="/cursos/educacao-fisica"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Educação Física</a>
-                    <a href="/cursos/ensino-distancia"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Ensino a Distância</a>
-                    <a href="/cursos/ensino-superior"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Ensino Superior</a>
-                    <a href="/cursos/fisica"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Física</a>
-                    <a href="/cursos/geografia"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Geografia</a>
-                    <a href="/cursos/gestao-escolar"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Gestão Escolar</a>
-                    <a href="/cursos/historia"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">História</a>
-                    <a href="/cursos/letras"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Letras</a>
-                    <a href="/cursos/literatura"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Literatura</a>
-                    <a href="/cursos/matematica"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Matemática</a>
-                    <a href="/cursos/pedagogia"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Pedagogia</a>
-                    <a href="/cursos/teologia"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Teologia</a>
+                <div id="cursos-tags-container" class="cursos-container flex flex-wrap justify-center gap-3 md:gap-4 fade-in">
+                    <!-- Tags serão injetadas via JS -->
                 </div>
 
                 <div class="text-center mt-8">
-                    <a href="/categorias/educacao"
+                    <a id="ver-todos-link" href="/categorias/educacao"
                         class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold text-sm md:text-base transition-colors"
                         rel="noopener noreferrer">
-                        VER TODOS OS CURSOS DE EDUCAÇÃO
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- SAÚDE -->
-        <section id="saude" class="py-12 md:py-16 bg-fasul-dark" aria-labelledby="cursos-saude-title">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 id="cursos-saude-title" class="text-xl md:text-2xl font-bold text-white mb-8 text-center">
-                    Cursos de <span class="text-cyan-400">Saúde</span>
-                </h2>
-
-                <div class="flex flex-wrap justify-center gap-3 md:gap-4">
-                    <a href="/cursos/biomedicina"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Biomedicina</a>
-                    <a href="/cursos/ciencias-biologicas"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Ciências Biológicas</a>
-                    <a href="/cursos/enfermagem"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Enfermagem</a>
-                    <a href="/cursos/estetica"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Estética</a>
-                    <a href="/cursos/farmacia"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Farmácia</a>
-                    <a href="/cursos/fisioterapia"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Fisioterapia</a>
-                    <a href="/cursos/gestao-hospitalar"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Gestão Hospitalar</a>
-                    <a href="/cursos/medicina"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Medicina</a>
-                    <a href="/cursos/neurociencia"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Neurociência</a>
-                    <a href="/cursos/nutricao"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Nutrição</a>
-                    <a href="/cursos/odontologia"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Odontologia</a>
-                    <a href="/cursos/psicologia"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Psicologia</a>
-                    <a href="/cursos/saude"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Saúde</a>
-                    <a href="/cursos/saude-da-familia"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Saúde da Família</a>
-                    <a href="/cursos/veterinaria"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Veterinária</a>
-                </div>
-
-                <div class="text-center mt-8">
-                    <a href="/categorias/saude"
-                        class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold text-sm md:text-base transition-colors"
-                        rel="noopener noreferrer">
-                        VER TODOS OS CURSOS DE SAÚDE
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- GESTÃO -->
-        <section id="gestao" class="py-12 md:py-16 bg-fasul-dark" aria-labelledby="cursos-gestao-title">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 id="cursos-gestao-title" class="text-xl md:text-2xl font-bold text-white mb-8 text-center">
-                    Cursos de <span class="text-cyan-400">Gestão</span>
-                </h2>
-
-                <div class="flex flex-wrap justify-center gap-3 md:gap-4">
-                    <a href="/cursos/administracao"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Administração</a>
-                    <a href="/cursos/agronegocio"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Agronegócio</a>
-                    <a href="/cursos/ciencias-contabeis"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Ciências Contábeis</a>
-                    <a href="/cursos/comercio-exterior"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Comércio Exterior</a>
-                    <a href="/cursos/empreendedorismo"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Empreendedorismo</a>
-                    <a href="/cursos/financas"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Finanças</a>
-                    <a href="/cursos/gestao"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Gestão</a>
-                    <a href="/cursos/gestao-de-projetos"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Gestão de Projetos</a>
-                    <a href="/cursos/gestao-publica"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Gestão Pública</a>
-                    <a href="/cursos/logistica"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Logística</a>
-                    <a href="/cursos/marketing"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Marketing</a>
-                    <a href="/cursos/mba"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">MBA</a>
-                    <a href="/cursos/negocios-imobiliarios"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Negócios Imobiliários</a>
-                    <a href="/cursos/recursos-humanos"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Recursos Humanos</a>
-                    <a href="/cursos/relacoes-internacionais"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Relações Internacionais</a>
-                    <a href="/cursos/servico-social"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Serviço Social</a>
-                </div>
-
-                <div class="text-center mt-8">
-                    <a href="/categorias/gestao"
-                        class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold text-sm md:text-base transition-colors"
-                        rel="noopener noreferrer">
-                        VER TODOS OS CURSOS DE GESTÃO
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- DIREITO -->
-        <section id="direito" class="py-12 md:py-16 bg-fasul-dark" aria-labelledby="cursos-direito-title">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 id="cursos-direito-title" class="text-xl md:text-2xl font-bold text-white mb-8 text-center">
-                    Cursos de <span class="text-cyan-400">Direito</span>
-                </h2>
-
-                <div class="flex flex-wrap justify-center gap-3 md:gap-4">
-                    <a href="/cursos/direito"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Direito</a>
-                    <a href="/cursos/direito-civil"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Direito Civil</a>
-                    <a href="/cursos/seguranca-publica"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Segurança Pública</a>
-                </div>
-
-                <div class="text-center mt-8">
-                    <a href="/categorias/direito"
-                        class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold text-sm md:text-base transition-colors"
-                        rel="noopener noreferrer">
-                        VER TODOS OS CURSOS DE DIREITO
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ENGENHARIA -->
-        <section id="engenharia" class="py-12 md:py-16 bg-fasul-dark" aria-labelledby="cursos-engenharia-title">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 id="cursos-engenharia-title" class="text-xl md:text-2xl font-bold text-white mb-8 text-center">
-                    Cursos de <span class="text-cyan-400">Engenharia</span>
-                </h2>
-
-                <div class="flex flex-wrap justify-center gap-3 md:gap-4">
-                    <a href="/cursos/arquitetura"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Arquitetura</a>
-                    <a href="/cursos/engenharia"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Engenharia</a>
-                    <a href="/cursos/engenharia-ambiental"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Engenharia Ambiental</a>
-                    <a href="/cursos/engenharia-civil"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Engenharia Civil</a>
-                    <a href="/cursos/engenharia-de-producao"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Engenharia de Produção</a>
-                    <a href="/cursos/engenharia-eletrica"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Engenharia Elétrica</a>
-                    <a href="/cursos/gestao-ambiental"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Gestão Ambiental</a>
-                    <a href="/cursos/meio-ambiente"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Meio Ambiente</a>
-                    <a href="/cursos/quimica"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Química</a>
-                    <a href="/cursos/seguranca-do-trabalho"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Segurança do Trabalho</a>
-                </div>
-
-                <div class="text-center mt-8">
-                    <a href="/categorias/engenharia"
-                        class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold text-sm md:text-base transition-colors"
-                        rel="noopener noreferrer">
-                        VER TODOS OS CURSOS DE ENGENHARIA
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- HUMANAS -->
-        <section id="humanas" class="py-12 md:py-16 bg-fasul-dark" aria-labelledby="cursos-humanas-title">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 id="cursos-humanas-title" class="text-xl md:text-2xl font-bold text-white mb-8 text-center">
-                    Cursos de <span class="text-cyan-400">Humanas</span>
-                </h2>
-
-                <div class="flex flex-wrap justify-center gap-3 md:gap-4">
-                    <a href="/cursos/antropologia"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Antropologia</a>
-                    <a href="/cursos/artes-visuais"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Artes Visuais</a>
-                    <a href="/cursos/ciencias-sociais"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Ciências Sociais</a>
-                    <a href="/cursos/cinema"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Cinema</a>
-                    <a href="/cursos/comunicacao-social"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Comunicação Social</a>
-                    <a href="/cursos/danca"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Dança</a>
-                    <a href="/cursos/design"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Design</a>
-                    <a href="/cursos/filosofia"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Filosofia</a>
-                    <a href="/cursos/gastronomia"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Gastronomia</a>
-                    <a href="/cursos/humanas"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Humanas</a>
-                    <a href="/cursos/jornalismo"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Jornalismo</a>
-                    <a href="/cursos/lingua-espanhola"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Língua Espanhola</a>
-                    <a href="/cursos/lingua-inglesa"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Língua Inglesa</a>
-                    <a href="/cursos/lingua-portuguesa"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Língua Portuguesa</a>
-                    <a href="/cursos/musica"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Música</a>
-                    <a href="/cursos/sociologia"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Sociologia</a>
-                </div>
-
-                <div class="text-center mt-8">
-                    <a href="/categorias/humanas"
-                        class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold text-sm md:text-base transition-colors"
-                        rel="noopener noreferrer">
-                        VER TODOS OS CURSOS DE HUMANAS
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- TECNOLOGIA -->
-        <section id="tecnologia" class="py-12 md:py-16 bg-fasul-dark" aria-labelledby="cursos-tecnologia-title">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 id="cursos-tecnologia-title" class="text-xl md:text-2xl font-bold text-white mb-8 text-center">
-                    Cursos de <span class="text-cyan-400">Tecnologia</span>
-                </h2>
-
-                <div class="flex flex-wrap justify-center gap-3 md:gap-4">
-                    <a href="/cursos/ciencia-da-computacao"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Ciência da Computação</a>
-                    <a href="/cursos/sistemas-de-informacao"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Sistemas de Informação</a>
-                    <a href="/cursos/tecnologia"
-                        class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
-                        rel="noopener noreferrer">Tecnologia</a>
-                </div>
-
-                <div class="text-center mt-8">
-                    <a href="/categorias/tecnologia"
-                        class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold text-sm md:text-base transition-colors"
-                        rel="noopener noreferrer">
-                        VER TODOS OS CURSOS DE TECNOLOGIA
+                        <span id="ver-todos-texto">VER TODOS OS CURSOS DE EDUCAÇÃO</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M17 8l4 4m0 0l-4 4m4-4H3" />
