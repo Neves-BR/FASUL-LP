@@ -288,7 +288,85 @@ body {
     background-color: #06B6D4;
     color: #0B132B;
 }
+/* Estilização Geral da Seção */
+.bolsas-financiamento {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+  color: #333333;
+}
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Cabeçalho da Seção */
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #0b2545;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.section-header p {
+  font-size: 16px;
+  color: #444444;
+}
+
+/* Grade dos Cards */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+/* Estilo Individual do Card */
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Imagem do Card (fundo cinza suave opcional) */
+.card-image {
+  background-color: #f2f4f7;
+  border-radius: 6px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+.card-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Textos do Card */
+.card-content h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333333;
+}
 /* FAQ Accordion */
 .faq-item {
     background-color: #ffffff;
