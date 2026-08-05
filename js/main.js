@@ -350,17 +350,18 @@
             
             dados.cursos.forEach(curso => {
                 const link = document.createElement('a');
-                link.href = `/cursos/${curso.slug}`;
+                link.href = `https://afiliadoeducacionalfasul.com.br/283082026/posgraduacao/categoria/${curso.slug}`;
                 link.className = 'px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300';
                 link.textContent = curso.nome;
                 link.rel = 'noopener noreferrer';
+                link.target = '_blank';
                 cursosContainer.appendChild(link);
             });
 
             // Atualiza título e link "ver todos"
             categoriaAtivaNome.textContent = dados.nome;
             verTodosTexto.textContent = `VER TODOS OS CURSOS DE ${dados.nome.toUpperCase()}`;
-            verTodosLink.href = `/categorias/${categoriaKey}`;
+            verTodosLink.href = `https://afiliadoeducacionalfasul.com.br/283082026/posgraduacao/categoria/${categoriaKey}`;
 
             // Animação de entrada
             cursosContainer.classList.remove('fade-out');
