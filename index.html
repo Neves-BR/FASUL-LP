@@ -54,6 +54,297 @@
             }
         }
     </script>
+    <!-- SISTEMA DE BUSCA DE CURSOS -->
+    <script>
+        // ============================================================
+        // BASE DE DADOS DE CURSOS POR TIPO
+        // ============================================================
+        const cursosDB = {
+            'pos-graduacao': [
+                { nome: 'Pós-Graduação em Educação Especial e Inclusiva', link: BASE_URL + 'posgraduacao/pos-graduacao-em-educacao-especial-e-inclusiva' },
+                { nome: 'Pós-Graduação em Psicopedagogia', link: BASE_URL + 'posgraduacao/pos-graduacao-em-psicopedagogia' },
+                { nome: 'Pós-Graduação em Gestão Escolar e Coordenação Pedagógica', link: BASE_URL + 'posgraduacao/pos-graduacao-em-gestao-escolar-e-coordenacao-pedagogica' },
+                { nome: 'Pós-Graduação em Alfabetização e Letramento', link: BASE_URL + 'posgraduacao/pos-graduacao-em-alfabetizacao-e-letramento' },
+                { nome: 'Pós-Graduação em Neuropsicopedagogia', link: BASE_URL + 'posgraduacao/pos-graduacao-em-neuropsicopedagogia' },
+                { nome: 'Pós-Graduação em Docência do Ensino Superior', link: BASE_URL + 'posgraduacao/pos-graduacao-em-docencia-do-ensino-superior' },
+                { nome: 'Pós-Graduação em Educação Infantil', link: BASE_URL + 'posgraduacao/pos-graduacao-em-educacao-infantil' },
+                { nome: 'Pós-Graduação em Educação Física Escolar', link: BASE_URL + 'posgraduacao/pos-graduacao-em-educacao-fisica-escolar' },
+                { nome: 'Pós-Graduação em Gestão de Pessoas e Desenvolvimento Organizacional', link: BASE_URL + 'posgraduacao/pos-graduacao-em-gestao-de-pessoas-e-desenvolvimento-organizacional' },
+                { nome: 'Pós-Graduação em Gestão de Projetos e Metodologias Ágeis', link: BASE_URL + 'posgraduacao/pos-graduacao-em-gestao-de-projetos-e-metodologias-ageis' },
+                { nome: 'Pós-Graduação em Gestão Pública e Políticas Sociais', link: BASE_URL + 'posgraduacao/pos-graduacao-em-gestao-publica-e-politicas-sociais' },
+                { nome: 'Pós-Graduação em Gestão da Qualidade e Produtividade', link: BASE_URL + 'posgraduacao/pos-graduacao-em-gestao-da-qualidade-e-produtividade' },
+                { nome: 'Pós-Graduação em Gestão de Marketing Digital', link: BASE_URL + 'posgraduacao/pos-graduacao-em-gestao-de-marketing-digital' },
+                { nome: 'Pós-Graduação em Gestão Financeira e Controladoria', link: BASE_URL + 'posgraduacao/pos-graduacao-em-gestao-financeira-e-controladoria' },
+                { nome: 'Pós-Graduação em Gestão de Vendas e Negociação', link: BASE_URL + 'posgraduacao/pos-graduacao-em-gestao-de-vendas-e-negociacao' },
+                { nome: 'Pós-Graduação em Logística e Cadeia de Suprimentos', link: BASE_URL + 'posgraduacao/pos-graduacao-em-logistica-e-cadeia-de-suprimentos' },
+                { nome: 'Pós-Graduação em Gestão Hospitalar e da Saúde', link: BASE_URL + 'posgraduacao/pos-graduacao-em-gestao-hospitalar-e-da-saude' },
+                { nome: 'Pós-Graduação em Enfermagem em Urgência e Emergência', link: BASE_URL + 'posgraduacao/pos-graduacao-em-enfermagem-em-urgencia-e-emergencia' },
+                { nome: 'Pós-Graduação em Saúde Coletiva e Epidemiologia', link: BASE_URL + 'posgraduacao/pos-graduacao-em-saude-coletiva-e-epidemiologia' },
+                { nome: 'Pós-Graduação em Fisioterapia Dermato Funcional', link: BASE_URL + 'posgraduacao/pos-graduacao-em-fisioterapia-dermato-funcional' },
+                { nome: 'Pós-Graduação em Nutrição Clínica e Esportiva', link: BASE_URL + 'posgraduacao/pos-graduacao-em-nutricao-clinica-e-esportiva' },
+                { nome: 'Pós-Graduação em Psicologia Clínica', link: BASE_URL + 'posgraduacao/pos-graduacao-em-psicologia-clinica' },
+                { nome: 'Pós-Graduação em Psicologia Organizacional e do Trabalho', link: BASE_URL + 'posgraduacao/pos-graduacao-em-psicologia-organizacional-e-do-trabalho' },
+                { nome: 'Pós-Graduação em Direito Civil e Processual Civil', link: BASE_URL + 'posgraduacao/pos-graduacao-em-direito-civil-e-processual-civil' },
+                { nome: 'Pós-Graduação em Direito Constitucional e Tributário', link: BASE_URL + 'posgraduacao/pos-graduacao-em-direito-constitucional-e-tributario' },
+                { nome: 'Pós-Graduação em Direito do Trabalho e Previdenciário', link: BASE_URL + 'posgraduacao/pos-graduacao-em-direito-do-trabalho-e-previdenciario' },
+                { nome: 'Pós-Graduação em Direito Penal e Processual Penal', link: BASE_URL + 'posgraduacao/pos-graduacao-em-direito-penal-e-processual-penal' },
+                { nome: 'Pós-Graduação em Direito Empresarial e Tecnologia', link: BASE_URL + 'posgraduacao/pos-graduacao-em-direito-empresarial-e-tecnologia' },
+                { nome: 'Pós-Graduação em Engenharia de Segurança do Trabalho', link: BASE_URL + 'posgraduacao/pos-graduacao-em-engenharia-de-seguranca-do-trabalho' },
+                { nome: 'Pós-Graduação em Engenharia Ambiental e Sustentabilidade', link: BASE_URL + 'posgraduacao/pos-graduacao-em-engenharia-ambiental-e-sustentabilidade' },
+                { nome: 'Pós-Graduação em Engenharia de Produção e Operações', link: BASE_URL + 'posgraduacao/pos-graduacao-em-engenharia-de-producao-e-operacoes' },
+                { nome: 'Pós-Graduação em Engenharia Elétrica e Energias Renováveis', link: BASE_URL + 'posgraduacao/pos-graduacao-em-engenharia-eletrica-e-energias-renovaveis' },
+                { nome: 'Pós-Graduação em Engenharia Civil e Estruturas', link: BASE_URL + 'posgraduacao/pos-graduacao-em-engenharia-civil-e-estruturas' },
+                { nome: 'Pós-Graduação em Desenvolvimento Full Stack', link: BASE_URL + 'posgraduacao/pos-graduacao-em-desenvolvimento-full-stack' },
+                { nome: 'Pós-Graduação em Ciência de Dados e Inteligência Artificial', link: BASE_URL + 'posgraduacao/pos-graduacao-em-ciencia-de-dados-e-inteligencia-artificial' },
+                { nome: 'Pós-Graduação em Segurança da Informação e Cibersegurança', link: BASE_URL + 'posgraduacao/pos-graduacao-em-seguranca-da-informacao-e-ciberseguranca' },
+                { nome: 'Pós-Graduação em Gestão de Tecnologia da Informação', link: BASE_URL + 'posgraduacao/pos-graduacao-em-gestao-de-tecnologia-da-informacao' },
+                { nome: 'Pós-Graduação em Computação em Nuvem e DevOps', link: BASE_URL + 'posgraduacao/pos-graduacao-em-computacao-em-nuvem-e-devops' },
+                { nome: 'Pós-Graduação em Sociologia e Políticas Públicas', link: BASE_URL + 'posgraduacao/pos-graduacao-em-sociologia-e-politicas-publicas' },
+                { nome: 'Pós-Graduação em Filosofia e Ética Contemporânea', link: BASE_URL + 'posgraduacao/pos-graduacao-em-filosofia-e-etica-contemporanea' },
+                { nome: 'Pós-Graduação em História e Patrimônio Cultural', link: BASE_URL + 'posgraduacao/pos-graduacao-em-historia-e-patrimonio-cultural' },
+                { nome: 'Pós-Graduação em Geografia e Meio Ambiente', link: BASE_URL + 'posgraduacao/pos-graduacao-em-geografia-e-meio-ambiente' },
+                { nome: 'Pós-Graduação em Comunicação e Mídias Digitais', link: BASE_URL + 'posgraduacao/pos-graduacao-em-comunicacao-e-midias-digitais' },
+                { nome: 'Pós-Graduação em Serviço Social e Políticas Sociais', link: BASE_URL + 'posgraduacao/pos-graduacao-em-servico-social-e-politicas-sociais' },
+            ],
+            'graduacao': [
+                { nome: 'Graduação em Administração', link: BASE_URL + 'graduacao/graduacao-em-administracao-ead' },
+                { nome: 'Graduação em Análise e Desenvolvimento de Sistemas', link: BASE_URL + 'graduacao/graduacao-em-analise-e-desenvolvimento-de-sistemas-ead' },
+                { nome: 'Graduação em Ciências Contábeis', link: BASE_URL + 'graduacao/graduacao-em-ciencias-contabeis' },
+                { nome: 'Graduação em Gestão Comercial', link: BASE_URL + 'graduacao/graduacao-em-gestao-comercial' },
+                { nome: 'Graduação em Gestão da Tecnologia da Informação', link: BASE_URL + 'graduacao/graduacao-em-gestao-da-tecnologia-da-informacao-ead' },
+                { nome: 'Graduação em Gestão de Marketing', link: BASE_URL + 'graduacao/graduacao-em-gestao-de-marketing' },
+                { nome: 'Graduação em Negócios Imobiliários', link: BASE_URL + 'graduacao/graduacao-em-negocios-imobiliarios-ead' },
+                { nome: 'Graduação em Gestão de Recursos Humanos', link: BASE_URL + 'graduacao/graduacao-em-gestao-de-recursos-humanos-ead' },
+                { nome: 'Graduação em Gestão Financeira', link: BASE_URL + 'graduacao/graduacao-em-gestao-financeira' },
+                { nome: 'Graduação em Gestão Pública', link: BASE_URL + 'graduacao/graduacao-em-gestao-publica' },
+                { nome: 'Graduação em Logística', link: BASE_URL + 'graduacao/graduacao-tecnologia-em-logistica-ead' },
+                { nome: 'Graduação em Pedagogia', link: BASE_URL + 'graduacao/graduacao-em-pedagogia-ead' },
+                { nome: 'Graduação em Processos Gerenciais', link: BASE_URL + 'graduacao/graduacao-em-processos-gerenciais' },
+                { nome: 'Graduação em Segurança Pública', link: BASE_URL + 'graduacao/graduacao-em-seguranca-publica' },
+                { nome: 'Graduação em Serviço Social', link: BASE_URL + 'graduacao/graduacao-em-servico-social' },
+            ],
+            'mba': [
+                { nome: 'MBA em Gestão de Negócios e Inovação', link: BASE_URL + 'posgraduacao/pos-graduacao-em-gestao-de-negocios-e-inovacao' },
+                { nome: 'MBA em Gestão Financeira e Controladoria', link: BASE_URL + 'posgraduacao/pos-graduacao-em-gestao-financeira-e-controladoria' },
+                { nome: 'MBA em Gestão de Pessoas e Liderança', link: BASE_URL + 'posgraduacao/pos-graduacao-em-gestao-de-pessoas-e-desenvolvimento-organizacional' },
+                { nome: 'MBA em Marketing Digital e Estratégia de Marca', link: BASE_URL + 'posgraduacao/pos-graduacao-em-gestao-de-marketing-digital' },
+                { nome: 'MBA em Gestão da Qualidade e Excelência Operacional', link: BASE_URL + 'posgraduacao/pos-graduacao-em-gestao-da-qualidade-e-produtividade' },
+                { nome: 'MBA em Gestão de Projetos e Metodologias Ágeis', link: BASE_URL + 'posgraduacao/pos-graduacao-em-gestao-de-projetos-e-metodologias-ageis' },
+                { nome: 'MBA em Gestão Pública e Políticas Sociais', link: BASE_URL + 'posgraduacao/pos-graduacao-em-gestao-publica-e-politicas-sociais' },
+                { nome: 'MBA em Gestão da Tecnologia da Informação', link: BASE_URL + 'posgraduacao/pos-graduacao-em-gestao-de-tecnologia-da-informacao' },
+                { nome: 'MBA em Gestão da Saúde e Hospitalar', link: BASE_URL + 'posgraduacao/pos-graduacao-em-gestao-hospitalar-e-da-saude' },
+                { nome: 'MBA em Direito Empresarial e Compliance', link: BASE_URL + 'posgraduacao/pos-graduacao-em-direito-empresarial-e-tecnologia' },
+            ],
+            'cursos-livres': [
+                { nome: 'Curso de Excel Avançado', link: BASE_URL + 'cursos-livres/curso-de-excel-avancado' },
+                { nome: 'Curso de Power BI e Análise de Dados', link: BASE_URL + 'cursos-livres/curso-de-power-bi-e-analise-de-dados' },
+                { nome: 'Curso de Gestão de Redes Sociais', link: BASE_URL + 'cursos-livres/curso-de-gestao-de-redes-sociais' },
+                { nome: 'Curso de Copywriting e Persuasão', link: BASE_URL + 'cursos-livres/curso-de-copywriting-e-persuasao' },
+                { nome: 'Curso de Gestão de Tráfego Pago', link: BASE_URL + 'cursos-livres/curso-de-gestao-de-trafego-pago' },
+                { nome: 'Curso de Programação Python', link: BASE_URL + 'cursos-livres/curso-de-programacao-python' },
+                { nome: 'Curso de Desenvolvimento Web', link: BASE_URL + 'cursos-livres/curso-de-desenvolvimento-web' },
+                { nome: 'Curso de UX/UI Design', link: BASE_URL + 'cursos-livres/curso-de-ux-ui-design' },
+                { nome: 'Curso de Inglês para Negócios', link: BASE_URL + 'cursos-livres/curso-de-ingles-para-negocios' },
+                { nome: 'Curso de Oratória e Comunicação', link: BASE_URL + 'cursos-livres/curso-de-oratoria-e-comunicacao' },
+                { nome: 'Curso de Liderança e Gestão de Equipes', link: BASE_URL + 'cursos-livres/curso-de-lideranca-e-gestao-de-equipes' },
+                { nome: 'Curso de Empreendedorismo Digital', link: BASE_URL + 'cursos-livres/curso-de-empreendedorismo-digital' },
+                { nome: 'Curso de Finanças Pessoais e Investimentos', link: BASE_URL + 'cursos-livres/curso-de-financas-pessoais-e-investimentos' },
+                { nome: 'Curso de Gestão de Projetos com Scrum', link: BASE_URL + 'cursos-livres/curso-de-gestao-de-projetos-com-scrum' },
+                { nome: 'Curso de Inteligência Artificial e ChatGPT', link: BASE_URL + 'cursos-livres/curso-de-inteligencia-artificial-e-chatgpt' },
+            ]
+        };
+
+        // ============================================================
+        // SISTEMA DE BUSCA COM AUTOCOMPLETE
+        // ============================================================
+        (function() {
+            const tipoSelect = document.getElementById('tipo-curso');
+            const buscaInput = document.getElementById('busca-curso');
+            const buscaForm = document.querySelector('form[action="/buscar"]');
+            
+            if (!tipoSelect || !buscaInput) return;
+
+            // Criar container do dropdown
+            const dropdownContainer = document.createElement('div');
+            dropdownContainer.id = 'busca-dropdown';
+            dropdownContainer.className = 'absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden z-50 hidden max-h-80 overflow-y-auto';
+            dropdownContainer.setAttribute('role', 'listbox');
+            dropdownContainer.setAttribute('aria-label', 'Sugestões de cursos');
+            buscaInput.parentElement.appendChild(dropdownContainer);
+
+            let selectedIndex = -1;
+            let sugestoesAtuais = [];
+
+            // Normaliza texto para busca (remove acentos, converte para minúsculas)
+            function normalizar(texto) {
+                return texto.toLowerCase()
+                    .normalize('NFD')
+                    .replace(/[\u0300-\u036f]/g, '');
+            }
+
+            // Busca cursos pelo tipo e termo
+            function buscarCursos(tipo, termo) {
+                const cursos = cursosDB[tipo] || [];
+                if (!termo || termo.length < 2) return [];
+                
+                const termoNormalizado = normalizar(termo);
+                return cursos.filter(curso => {
+                    const nomeNormalizado = normalizar(curso.nome);
+                    return nomeNormalizado.includes(termoNormalizado);
+                }).slice(0, 8); // máximo 8 sugestões
+            }
+
+            // Renderiza o dropdown de sugestões
+            function renderizarSugestoes(sugestoes) {
+                sugestoesAtuais = sugestoes;
+                selectedIndex = -1;
+                
+                if (sugestoes.length === 0) {
+                    dropdownContainer.innerHTML = `
+                        <div class="px-4 py-4 text-gray-500 text-sm text-center">
+                            Nenhum curso encontrado. Tente outro termo.
+                        </div>
+                    `;
+                    dropdownContainer.classList.remove('hidden');
+                    return;
+                }
+
+                const tipoAtual = tipoSelect.options[tipoSelect.selectedIndex].text;
+                
+                dropdownContainer.innerHTML = `
+                    <div class="px-3 py-2 bg-gray-50 border-b border-gray-100">
+                        <span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">${tipoAtual}</span>
+                        <span class="text-xs text-gray-400 ml-1">(${sugestoes.length} resultado${sugestoes.length > 1 ? 's' : ''})</span>
+                    </div>
+                    ${sugestoes.map((curso, index) => `
+                        <a href="${curso.link}" 
+                           class="busca-sugestao block px-4 py-3 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-700 transition-colors border-b border-gray-50 last:border-0 cursor-pointer"
+                           data-index="${index}"
+                           data-link="${curso.link}"
+                           role="option"
+                           rel="noopener noreferrer"
+                           target="_blank">
+                            <div class="flex items-center gap-2">
+                                <svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                                </svg>
+                                <span class="font-medium">${curso.nome}</span>
+                            </div>
+                        </a>
+                    `).join('')}
+                    <div class="px-3 py-2 bg-gray-50 border-t border-gray-100">
+                        <span class="text-xs text-gray-400">Clique em um curso para visitar a página ou pressione Enter</span>
+                    </div>
+                `;
+                
+                dropdownContainer.classList.remove('hidden');
+                
+                // Adicionar event listeners aos itens
+                dropdownContainer.querySelectorAll('.busca-sugestao').forEach(item => {
+                    item.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const link = this.dataset.link;
+                        window.open(link, '_blank');
+                        fecharDropdown();
+                        buscaInput.value = '';
+                    });
+                });
+            }
+
+            function fecharDropdown() {
+                dropdownContainer.classList.add('hidden');
+                selectedIndex = -1;
+                sugestoesAtuais = [];
+            }
+
+            function destacarItem(index) {
+                const items = dropdownContainer.querySelectorAll('.busca-sugestao');
+                items.forEach((item, i) => {
+                    if (i === index) {
+                        item.classList.add('bg-cyan-50', 'text-cyan-700');
+                        item.setAttribute('aria-selected', 'true');
+                    } else {
+                        item.classList.remove('bg-cyan-50', 'text-cyan-700');
+                        item.setAttribute('aria-selected', 'false');
+                    }
+                });
+            }
+
+            // Evento de input no campo de busca
+            buscaInput.addEventListener('input', function() {
+                const termo = this.value.trim();
+                const tipo = tipoSelect.value;
+                
+                if (termo.length >= 2) {
+                    const sugestoes = buscarCursos(tipo, termo);
+                    renderizarSugestoes(sugestoes);
+                } else {
+                    fecharDropdown();
+                }
+            });
+
+            // Evento de mudança no select de tipo
+            tipoSelect.addEventListener('change', function() {
+                buscaInput.value = '';
+                fecharDropdown();
+                // Atualiza placeholder
+                const tipoTexto = this.options[this.selectedIndex].text;
+                buscaInput.placeholder = `Buscar em ${tipoTexto.toLowerCase()}...`;
+            });
+
+            // Navegação por teclado
+            buscaInput.addEventListener('keydown', function(e) {
+                if (sugestoesAtuais.length === 0) return;
+                
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    selectedIndex = Math.min(selectedIndex + 1, sugestoesAtuais.length - 1);
+                    destacarItem(selectedIndex);
+                } else if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    selectedIndex = Math.max(selectedIndex - 1, 0);
+                    destacarItem(selectedIndex);
+                } else if (e.key === 'Enter') {
+                    e.preventDefault();
+                    if (selectedIndex >= 0 && sugestoesAtuais[selectedIndex]) {
+                        window.open(sugestoesAtuais[selectedIndex].link, '_blank');
+                        fecharDropdown();
+                        buscaInput.value = '';
+                    }
+                } else if (e.key === 'Escape') {
+                    fecharDropdown();
+                }
+            });
+
+            // Fechar dropdown ao clicar fora
+            document.addEventListener('click', function(e) {
+                if (!buscaInput.parentElement.contains(e.target)) {
+                    fecharDropdown();
+                }
+            });
+
+            // Interceptar submit do form
+            buscaForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const termo = buscaInput.value.trim();
+                const tipo = tipoSelect.value;
+                
+                if (termo.length >= 2) {
+                    const sugestoes = buscarCursos(tipo, termo);
+                    if (sugestoes.length > 0) {
+                        // Abre o primeiro resultado
+                        window.open(sugestoes[0].link, '_blank');
+                        buscaInput.value = '';
+                        fecharDropdown();
+                    } else {
+                        // Se não encontrou, abre a listagem do tipo
+                        const listagemUrl = linksListagem[tipo === 'pos-graduacao' ? 'posGraduacao' : tipo === 'graduacao' ? 'graduacao' : tipo === 'mba' ? 'mba' : 'cursosLivres'];
+                        window.open(listagemUrl, '_blank');
+                    }
+                }
+            });
+        })();
+    </script>
     <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
     <link rel="stylesheet" href="css/style.css">
 
