@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+
     <!-- Content Security Policy (CSP) Restritiva -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.tailwindcss.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';">
-    
+
     <!-- SEO Básico -->
     <title>FASUL - A Maior Campanha de Graduação e Pós-Graduação EAD do Brasil</title>
     <meta name="description" content="FASUL oferece mais de 2000 cursos de graduação e pós-graduação EAD reconhecidos pelo MEC. Estude 100% online com certificado a partir de 2 meses. Matrícula por apenas R$29,90 e mensalidades a partir de R$139,00.">
@@ -15,7 +15,7 @@
     <meta name="robots" content="index, follow">
     <meta name="author" content="FASUL - Faculdade de Ensino Superior">
     <link rel="canonical" href="https://www.fasul.edu.br/">
-    
+
     <!-- Open Graph / Redes Sociais -->
     <meta property="og:title" content="FASUL - A Maior Campanha de Graduação e Pós-Graduação EAD do Brasil">
     <meta property="og:description" content="Mais de 2000 cursos EAD reconhecidos pelo MEC. Matrícula R$29,90 e mensalidades a partir de R$139,00. Estude 100% online.">
@@ -24,18 +24,18 @@
     <meta property="og:image" content="https://www.fasul.edu.br/assets/og-image.jpg">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:site_name" content="FASUL">
-    
+
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="FASUL - A Maior Campanha de Graduação e Pós-Graduação EAD">
     <meta name="twitter:description" content="Mais de 2000 cursos EAD reconhecidos pelo MEC. Matrícula R$29,90 e mensalidades a partir de R$139,00.">
     <meta name="twitter:image" content="https://www.fasul.edu.br/assets/twitter-image.jpg">
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -54,7 +54,7 @@
             }
         }
     </script>
-    
+
     <!-- Schema Markup JSON-LD -->
     <script type="application/ld+json">
     {
@@ -131,7 +131,7 @@
         ]
     }
     </script>
-    
+
     <style>
         body { font-family: 'Inter', 'Montserrat', sans-serif; }
         .gradient-hero { background: linear-gradient(135deg, #0B132B 0%, #1a1a2e 50%, #16213e 100%); }
@@ -145,6 +145,7 @@
         }
         .animate-float { animation: float 3s ease-in-out infinite; }
     </style>
+<base target="_blank">
 </head>
 <body class="bg-fasul-dark text-white antialiased">
 
@@ -156,14 +157,17 @@
             <div class="flex items-center justify-between h-16 md:h-20">
                 <!-- Logo Placeholder -->
                 <a href="/" class="flex-shrink-0" aria-label="Página inicial da FASUL">
-                    <div class="w-32 h-10 flex items-center justify-center">
-                        <img 
-                            src="https://www.fasuleducacional.edu.br/images/logo-v2.png" 
-                            alt="Logo FASUL" 
-                            class="w-full h-full object-contain"/>
+                    <div class="w-32 h-10 bg-gray-700 rounded flex items-center justify-center">
+                        <div class="w-32 h-10 flex items-center justify-center">
+                            <img 
+                                src="https://www.fasuleducacional.edu.br/images/logo-v2.png" 
+                                alt="Logo FASUL" 
+                                class="w-full h-full object-contain"
+                            />
+                        </div>
                     </div>
                 </a>
-                
+
                 <!-- Menu Desktop -->
                 <nav class="hidden lg:flex items-center space-x-1" aria-label="Navegação principal">
                     <a href="#pos-mba" class="px-3 py-2 text-sm font-medium text-gray-300 hover:text-cyan-400 transition-colors duration-200 rounded-md hover:bg-white/5" rel="noopener noreferrer">PÓS & MBA EAD</a>
@@ -172,7 +176,7 @@
                     <a href="#cursos-livres" class="px-3 py-2 text-sm font-medium text-gray-300 hover:text-cyan-400 transition-colors duration-200 rounded-md hover:bg-white/5" rel="noopener noreferrer">CURSOS LIVRES</a>
                     <a href="#contato" class="px-4 py-2 text-sm font-bold text-fasul-dark bg-cyan-400 rounded-lg hover:bg-cyan-300 transition-colors duration-200" rel="noopener noreferrer">FALE CONOSCO</a>
                 </nav>
-                
+
                 <!-- Botão Mobile -->
                 <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md text-gray-300 hover:text-white hover:bg-white/10 transition-colors" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobile-menu">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -181,7 +185,7 @@
                 </button>
             </div>
         </div>
-        
+
         <!-- Menu Mobile -->
         <nav id="mobile-menu" class="lg:hidden hidden bg-fasul-dark border-t border-white/10" aria-label="Navegação mobile">
             <div class="px-4 py-3 space-y-1">
@@ -204,7 +208,7 @@
                 <div class="absolute top-20 left-10 w-72 h-72 bg-purple-900/20 rounded-full blur-3xl"></div>
                 <div class="absolute bottom-20 right-10 w-96 h-96 bg-cyan-900/10 rounded-full blur-3xl"></div>
             </div>
-            
+
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 lg:py-28">
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <!-- Conteúdo do Hero -->
@@ -216,12 +220,12 @@
                             </svg>
                             <span class="text-sm md:text-base font-semibold text-yellow-400 tracking-wide">DÊ O PLAY NO SEU FUTURO</span>
                         </div>
-                        
+
                         <!-- Título Principal H1 -->
                         <h1 id="hero-title" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight">
                             A MAIOR CAMPANHA DE <span class="text-cyan-400">GRADUAÇÃO EAD</span> DO BRASIL
                         </h1>
-                        
+
                         <!-- Badge de Preço -->
                         <div class="inline-block">
                             <div class="bg-fasul-yellow text-gray-900 px-6 py-3 rounded-xl font-bold text-sm md:text-base shadow-lg glow-yellow">
@@ -229,7 +233,7 @@
                                 <span class="ml-2">POR R$ 139,00 / mês. FIXOS ATÉ O FINAL DO CURSO</span>
                             </div>
                         </div>
-                        
+
                         <!-- Tag de Preço Flutuante -->
                         <div class="flex items-center gap-2 text-gray-300">
                             <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -237,7 +241,7 @@
                             </svg>
                             <span class="text-sm md:text-base">Taxa única de matrícula <strong class="text-white">R$29,90</strong></span>
                         </div>
-                        
+
                         <!-- Bloco de Bônus -->
                         <div class="bg-gradient-to-r from-yellow-500/20 to-yellow-600/10 border border-yellow-500/30 rounded-xl p-4 md:p-6">
                             <div class="flex items-start gap-3">
@@ -252,7 +256,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- CTA -->
                         <div class="space-y-3">
                             <a href="#inscricao" class="inline-block w-full sm:w-auto px-8 py-4 bg-cyan-400 hover:bg-cyan-300 text-fasul-dark font-black text-lg md:text-xl uppercase tracking-wider rounded-xl transition-all duration-300 glow-cyan hover:scale-105 text-center" rel="noopener noreferrer">
@@ -266,7 +270,7 @@
                             </p>
                         </div>
                     </div>
-                    
+
                     <!-- Placeholder Imagem do Aluno -->
                     <div class="relative hidden lg:block">
                         <div class="relative w-full aspect-[4/5] max-w-md mx-auto">
@@ -317,7 +321,7 @@
                                 placeholder="Digite aqui o curso que você procura..." 
                                 class="w-full px-4 py-3 bg-gray-100 text-gray-900 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-400 placeholder-gray-500"
                                 maxlength="100"
-                                pattern="[A-Za-zÀ-ÿ0-9\\s\\-]{2,100}"
+                                pattern="[A-Za-zÀ-ÿ0-9\s\-]{2,100}"
                                 required
                                 autocomplete="off"
                                 aria-describedby="busca-help"
@@ -344,18 +348,18 @@
                 <h2 id="beneficios-title" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-tight mb-6">
                     MAIS DE <span class="inline-block bg-cyan-400 text-gray-900 px-3 py-1 rounded-lg">2000 CURSOS</span> DE PÓS-GRADUAÇÃO EAD
                 </h2>
-                
+
                 <!-- Subtítulo -->
                 <p class="text-gray-300 text-base md:text-lg lg:text-xl max-w-3xl mx-auto mb-10 leading-relaxed">
                     Conquiste seu <strong class="text-white">Certificado Reconhecido pelo MEC</strong> a partir de 2 meses. 
                     Estude 100% online e turbine sua carreira com a flexibilidade que você precisa.
                 </p>
-                
+
                 <!-- Botão/Tag -->
                 <a href="#categorias" class="inline-block px-8 py-4 bg-cyan-400 hover:bg-cyan-300 text-gray-900 font-bold text-sm md:text-base uppercase tracking-wider rounded-xl transition-all duration-300 glow-cyan" rel="noopener noreferrer">
                     TODAS AS CATEGORIAS — SEU CERTIFICADO A PARTIR DE 2 MESES
                 </a>
-                
+
                 <!-- Estatísticas rápidas -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
                     <div class="p-4">
@@ -384,7 +388,7 @@
         <section id="categorias" class="py-12 md:py-16 bg-fasul-dark border-t border-white/5" aria-labelledby="categorias-title">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 id="categorias-title" class="sr-only">Categorias de Cursos</h2>
-                
+
                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 md:gap-6">
                     <!-- Educação - Ativo -->
                     <a href="#educacao" class="group flex flex-col items-center p-4 md:p-6 rounded-xl bg-cyan-400/10 border border-cyan-400/30 hover:bg-cyan-400/20 transition-all duration-300" aria-current="page" rel="noopener noreferrer">
@@ -395,7 +399,7 @@
                         </div>
                         <span class="text-cyan-400 font-bold text-sm md:text-base text-center">Educação</span>
                     </a>
-                    
+
                     <!-- Saúde -->
                     <a href="#saude" class="group flex flex-col items-center p-4 md:p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300" rel="noopener noreferrer">
                         <div class="w-12 h-12 md:w-14 md:h-14 bg-white/10 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
@@ -405,7 +409,7 @@
                         </div>
                         <span class="text-gray-400 group-hover:text-cyan-400 font-medium text-sm md:text-base text-center transition-colors">Saúde</span>
                     </a>
-                    
+
                     <!-- Gestão -->
                     <a href="#gestao" class="group flex flex-col items-center p-4 md:p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300" rel="noopener noreferrer">
                         <div class="w-12 h-12 md:w-14 md:h-14 bg-white/10 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
@@ -415,7 +419,7 @@
                         </div>
                         <span class="text-gray-400 group-hover:text-cyan-400 font-medium text-sm md:text-base text-center transition-colors">Gestão</span>
                     </a>
-                    
+
                     <!-- Direito -->
                     <a href="#direito" class="group flex flex-col items-center p-4 md:p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300" rel="noopener noreferrer">
                         <div class="w-12 h-12 md:w-14 md:h-14 bg-white/10 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
@@ -425,7 +429,7 @@
                         </div>
                         <span class="text-gray-400 group-hover:text-cyan-400 font-medium text-sm md:text-base text-center transition-colors">Direito</span>
                     </a>
-                    
+
                     <!-- Engenharia -->
                     <a href="#engenharia" class="group flex flex-col items-center p-4 md:p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300" rel="noopener noreferrer">
                         <div class="w-12 h-12 md:w-14 md:h-14 bg-white/10 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
@@ -435,7 +439,7 @@
                         </div>
                         <span class="text-gray-400 group-hover:text-cyan-400 font-medium text-sm md:text-base text-center transition-colors">Engenharia</span>
                     </a>
-                    
+
                     <!-- Humanas -->
                     <a href="#humanas" class="group flex flex-col items-center p-4 md:p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300" rel="noopener noreferrer">
                         <div class="w-12 h-12 md:w-14 md:h-14 bg-white/10 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
@@ -445,7 +449,7 @@
                         </div>
                         <span class="text-gray-400 group-hover:text-cyan-400 font-medium text-sm md:text-base text-center transition-colors">Humanas</span>
                     </a>
-                    
+
                     <!-- Tecnologia -->
                     <a href="#tecnologia" class="group flex flex-col items-center p-4 md:p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300" rel="noopener noreferrer">
                         <div class="w-12 h-12 md:w-14 md:h-14 bg-white/10 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
@@ -467,7 +471,7 @@
                 <h2 id="cursos-educacao-title" class="text-xl md:text-2xl font-bold text-white mb-8 text-center">
                     Cursos de <span class="text-cyan-400">Educação</span>
                 </h2>
-                
+
                 <div class="flex flex-wrap justify-center gap-3 md:gap-4">
                     <a href="/cursos/artes" class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300" rel="noopener noreferrer">Artes</a>
                     <a href="/cursos/educacao" class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300" rel="noopener noreferrer">Educação</a>
@@ -486,7 +490,7 @@
                     <a href="/cursos/pedagogia" class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300" rel="noopener noreferrer">Pedagogia</a>
                     <a href="/cursos/teologia" class="px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300" rel="noopener noreferrer">Teologia</a>
                 </div>
-                
+
                 <div class="text-center mt-8">
                     <a href="/categorias/educacao" class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold text-sm md:text-base transition-colors" rel="noopener noreferrer">
                         VER TODOS OS CURSOS DE EDUCAÇÃO
@@ -512,7 +516,7 @@
                         Escolha entre Cursos Presenciais, Semipresenciais ou EAD e acelere sua Carreira com ensino focado na prática e Especializações inclusas.
                     </p>
                 </div>
-                
+
                 <!-- Cards de Cursos Placeholders -->
                 <div class="grid md:grid-cols-3 gap-6 md:gap-8">
                     <!-- Card 1 -->
@@ -531,7 +535,7 @@
                             <p class="text-gray-500 text-sm mt-1">Placeholder para descrição do curso</p>
                         </div>
                     </article>
-                    
+
                     <!-- Card 2 -->
                     <article class="group">
                         <div class="bg-gray-200 rounded-2xl overflow-hidden aspect-[4/3] flex items-center justify-center border-2 border-dashed border-gray-300 group-hover:border-cyan-400 transition-colors">
@@ -548,7 +552,7 @@
                             <p class="text-gray-500 text-sm mt-1">Placeholder para descrição do curso</p>
                         </div>
                     </article>
-                    
+
                     <!-- Card 3 -->
                     <article class="group">
                         <div class="bg-gray-200 rounded-2xl overflow-hidden aspect-[4/3] flex items-center justify-center border-2 border-dashed border-gray-300 group-hover:border-cyan-400 transition-colors">
@@ -577,7 +581,7 @@
                 <h2 id="faq-title" class="text-2xl md:text-3xl font-black text-gray-900 text-center mb-10 uppercase">
                     Perguntas Frequentes
                 </h2>
-                
+
                 <div class="space-y-4">
                     <details class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden group">
                         <summary class="px-6 py-4 font-semibold text-gray-900 cursor-pointer flex items-center justify-between hover:bg-gray-50 transition-colors">
@@ -590,7 +594,7 @@
                             Sim, todos os cursos de graduação e pós-graduação da FASUL são reconhecidos pelo MEC (Ministério da Educação) e possuem certificação válida em todo o território nacional. Nossos certificados têm o mesmo valor legal que os de instituições presenciais.
                         </div>
                     </details>
-                    
+
                     <details class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden group">
                         <summary class="px-6 py-4 font-semibold text-gray-900 cursor-pointer flex items-center justify-between hover:bg-gray-50 transition-colors">
                             Quanto tempo leva para receber o certificado?
@@ -602,7 +606,7 @@
                             Os certificados de pós-graduação são emitidos a partir de 2 meses de conclusão do curso. A graduação segue a carga horária regulamentada pelo MEC, e o diploma é expedido após a conclusão de todos os módulos e aprovação na avaliação final.
                         </div>
                     </details>
-                    
+
                     <details class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden group">
                         <summary class="px-6 py-4 font-semibold text-gray-900 cursor-pointer flex items-center justify-between hover:bg-gray-50 transition-colors">
                             Posso estudar 100% online?
@@ -614,7 +618,7 @@
                             Sim! A FASUL oferece modalidade 100% EAD (Ensino a Distância), permitindo que você estude de qualquer lugar do Brasil, no horário que for mais conveniente para você. Nossa plataforma está disponível 24 horas por dia, 7 dias por semana.
                         </div>
                     </details>
-                    
+
                     <details class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden group">
                         <summary class="px-6 py-4 font-semibold text-gray-900 cursor-pointer flex items-center justify-between hover:bg-gray-50 transition-colors">
                             Qual o valor da mensalidade?
@@ -643,14 +647,16 @@
                         <div class="w-32 h-10 flex items-center justify-center">
                             <img 
                                 src="https://www.fasuleducacional.edu.br/images/logo-v2.png" 
-                                alt="Logo FASUL"/>
+                                alt="Logo FASUL" 
+                                class="w-full h-full object-contain"
+                            />
                         </div>
                     </div>
                     <p class="text-gray-400 text-sm leading-relaxed">
                         Faculdade de Ensino Superior com mais de 2000 cursos EAD reconhecidos pelo MEC. Transformando vidas através da educação digital.
                     </p>
                 </div>
-                
+
                 <!-- Links Rápidos -->
                 <div>
                     <h3 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Cursos</h3>
@@ -661,7 +667,7 @@
                         <li><a href="#graduacao-semipresencial" class="text-gray-400 hover:text-cyan-400 text-sm transition-colors" rel="noopener noreferrer">Graduação Semipresencial</a></li>
                     </ul>
                 </div>
-                
+
                 <!-- Institucional -->
                 <div>
                     <h3 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Institucional</h3>
@@ -672,7 +678,7 @@
                         <li><a href="/trabalhe-conosco" class="text-gray-400 hover:text-cyan-400 text-sm transition-colors" rel="noopener noreferrer">Trabalhe Conosco</a></li>
                     </ul>
                 </div>
-                
+
                 <!-- Contato -->
                 <div id="contato">
                     <h3 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Fale Conosco</h3>
@@ -698,7 +704,7 @@
                     </ul>
                 </div>
             </div>
-            
+
             <!-- Copyright -->
             <div class="border-t border-white/10 mt-10 pt-8 text-center">
                 <p class="text-gray-500 text-sm">
@@ -716,7 +722,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             const menuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
-            
+
             if (menuBtn && mobileMenu) {
                 menuBtn.addEventListener('click', function() {
                     const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
@@ -724,7 +730,7 @@
                     mobileMenu.classList.toggle('hidden');
                 });
             }
-            
+
             // Smooth scroll para links internos
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
