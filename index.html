@@ -153,7 +153,6 @@
         .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
     </style>
     <base target="_blank">
-<base target="_blank">
 </head>
 
 <body class="bg-fasul-dark text-white antialiased">
@@ -1094,21 +1093,24 @@
                     <div class="w-32 h-10 flex items-center justify-center mb-4">
                         <img src="images/logo-v2.png" alt="Logo FASUL" class="w-full h-full object-contain" />
                     </div>
-                    <p class="text-gray-400 text-sm leading-relaxed">
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
                         Faculdade de Ensino Superior com mais de 2000 cursos EAD reconhecidos pelo MEC. Transformando vidas através da educação digital.
                     </p>
-                    <!-- Container principal com as suas classes do Bootstrap -->
-                <div class="pb-4 d-flex gap-1">
                     
-                    <!-- Divs vazias onde os selos serão injetados -->
-                    <div id="reputation-ra"></div>
-                    <div id="ra-verified-seal"></div>
+                    <!-- Título Reclame Aqui -->
+                    <span class="tituloRodape border-none text-white font-bold mb-4 block uppercase text-sm tracking-wider">Reclame aqui</span>
+                    
+                    <!-- Container principal do Reclame Aqui -->
+                    <div id="reputation-ra" class="pb-4 flex gap-2 items-center">
+                        <!-- Div onde o selo verificado será injetado -->
+                        <div id="ra-verified-seal"></div>
+                    </div>
+                    
+                    <!-- Scripts do Reclame Aqui apontando para a pasta js/ -->
+                    <!-- NOTA: Certifique-se de que os nomes dos arquivos baixados estejam exatamente assim, ou renomeie na sua pasta js/ -->
+                    <script defer type="text/javascript" src="js/bundle.js" data-id="cDd6eDZOQ09hVFdfM0pjcDpmYXN1bG1nLWZhY3VsZGFkZS1zdWxtaW5laXJh" data-target="reputation-ra" data-model="2"></script>
+                    <script defer type="text/javascript" src="js/bundle-verified.js" data-id="cDd6eDZOQ09hVFdfM0pjcDpmYXN1bG1nLWZhY3VsZGFkZS1zdWxtaW5laXJh" data-target="ra-verified-seal" data-model="2"></script>
                 
-                </div>
-                
-                <!-- Scripts (idealmente colocados no final do <body>) -->
-                <script defer type="text/javascript" src="https://s3.amazonaws.com/raichu-beta/selos/bundle.js" data-id="cDd6eDZOQ09hVFdfM0pjcDpmYXN1bG1nLWZhY3VsZGFkZS1zdWxtaW5laXJh" data-target="reputation-ra" data-model="2"></script>
-                <script defer type="text/javascript" src="https://s3.amazonaws.com/raichu-beta/ra-verified/bundle.js" data-id="cDd6eDZOQ09hVFdfM0pjcDpmYXN1bG1nLWZhY3VsZGFkZS1zdWxtaW5laXJh" data-target="ra-verified-seal" data-model="2"></script>
                 </div>
                 <div>
                     <h3 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Cursos</h3>
@@ -1289,7 +1291,7 @@
             function normalizar(texto) {
                 return texto.toLowerCase()
                     .normalize('NFD')
-                    .replace(/[̀-ͯ]/g, '');
+                    .replace(/[\u0300-\u036f]/g, '');
             }
 
             // Busca cursos pelo tipo e termo
