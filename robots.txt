@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fasul-lp.vercel.app/sitemap.xml
