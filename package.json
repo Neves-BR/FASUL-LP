@@ -2,5 +2,8 @@
   "scripts": {
     "build:css": "tailwindcss -i ./src/input.css -o ./css/style.css --minify",
     "watch:css": "tailwindcss -i ./src/input.css -o ./css/style.css --watch"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
   }
 }
