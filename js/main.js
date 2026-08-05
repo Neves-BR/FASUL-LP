@@ -7,6 +7,126 @@
     'use strict';
 
     // ============================================
+    // DADOS DOS CURSOS POR CATEGORIA
+    // ============================================
+    const cursosPorCategoria = {
+        educacao: {
+            nome: 'Educação',
+            cursos: [
+                { nome: 'Artes', slug: 'artes' },
+                { nome: 'Educação', slug: 'educacao' },
+                { nome: 'Educação Básica', slug: 'educacao-basica' },
+                { nome: 'Educação Especial', slug: 'educacao-especial' },
+                { nome: 'Educação Física', slug: 'educacao-fisica' },
+                { nome: 'Ensino a Distância', slug: 'ensino-distancia' },
+                { nome: 'Ensino Superior', slug: 'ensino-superior' },
+                { nome: 'Física', slug: 'fisica' },
+                { nome: 'Geografia', slug: 'geografia' },
+                { nome: 'Gestão Escolar', slug: 'gestao-escolar' },
+                { nome: 'História', slug: 'historia' },
+                { nome: 'Letras', slug: 'letras' },
+                { nome: 'Literatura', slug: 'literatura' },
+                { nome: 'Matemática', slug: 'matematica' },
+                { nome: 'Pedagogia', slug: 'pedagogia' },
+                { nome: 'Teologia', slug: 'teologia' }
+            ]
+        },
+        saude: {
+            nome: 'Saúde',
+            cursos: [
+                { nome: 'Biomedicina', slug: 'biomedicina' },
+                { nome: 'Ciências Biológicas', slug: 'ciencias-biologicas' },
+                { nome: 'Enfermagem', slug: 'enfermagem' },
+                { nome: 'Estética', slug: 'estetica' },
+                { nome: 'Farmácia', slug: 'farmacia' },
+                { nome: 'Fisioterapia', slug: 'fisioterapia' },
+                { nome: 'Gestão Hospitalar', slug: 'gestao-hospitalar' },
+                { nome: 'Medicina', slug: 'medicina' },
+                { nome: 'Neurociência', slug: 'neurociencia' },
+                { nome: 'Nutrição', slug: 'nutricao' },
+                { nome: 'Odontologia', slug: 'odontologia' },
+                { nome: 'Psicologia', slug: 'psicologia' },
+                { nome: 'Saúde', slug: 'saude' },
+                { nome: 'Saúde da Família', slug: 'saude-da-familia' },
+                { nome: 'Veterinária', slug: 'veterinaria' }
+            ]
+        },
+        gestao: {
+            nome: 'Gestão',
+            cursos: [
+                { nome: 'Administração', slug: 'administracao' },
+                { nome: 'Agronegócio', slug: 'agronegocio' },
+                { nome: 'Ciências Contábeis', slug: 'ciencias-contabeis' },
+                { nome: 'Comércio Exterior', slug: 'comercio-exterior' },
+                { nome: 'Empreendedorismo', slug: 'empreendedorismo' },
+                { nome: 'Finanças', slug: 'financas' },
+                { nome: 'Gestão', slug: 'gestao' },
+                { nome: 'Gestão de Projetos', slug: 'gestao-de-projetos' },
+                { nome: 'Gestão Pública', slug: 'gestao-publica' },
+                { nome: 'Logística', slug: 'logistica' },
+                { nome: 'Marketing', slug: 'marketing' },
+                { nome: 'MBA', slug: 'mba' },
+                { nome: 'Negócios Imobiliários', slug: 'negocios-imobiliarios' },
+                { nome: 'Recursos Humanos', slug: 'recursos-humanos' },
+                { nome: 'Relações Internacionais', slug: 'relacoes-internacionais' },
+                { nome: 'Serviço Social', slug: 'servico-social' }
+            ]
+        },
+        direito: {
+            nome: 'Direito',
+            cursos: [
+                { nome: 'Direito', slug: 'direito' },
+                { nome: 'Direito Civil', slug: 'direito-civil' },
+                { nome: 'Segurança Pública', slug: 'seguranca-publica' }
+            ]
+        },
+        engenharia: {
+            nome: 'Engenharia',
+            cursos: [
+                { nome: 'Arquitetura', slug: 'arquitetura' },
+                { nome: 'Engenharia', slug: 'engenharia' },
+                { nome: 'Engenharia Ambiental', slug: 'engenharia-ambiental' },
+                { nome: 'Engenharia Civil', slug: 'engenharia-civil' },
+                { nome: 'Engenharia de Produção', slug: 'engenharia-de-producao' },
+                { nome: 'Engenharia Elétrica', slug: 'engenharia-eletrica' },
+                { nome: 'Gestão Ambiental', slug: 'gestao-ambiental' },
+                { nome: 'Meio Ambiente', slug: 'meio-ambiente' },
+                { nome: 'Química', slug: 'quimica' },
+                { nome: 'Segurança do Trabalho', slug: 'seguranca-do-trabalho' }
+            ]
+        },
+        humanas: {
+            nome: 'Humanas',
+            cursos: [
+                { nome: 'Antropologia', slug: 'antropologia' },
+                { nome: 'Artes Visuais', slug: 'artes-visuais' },
+                { nome: 'Ciências Sociais', slug: 'ciencias-sociais' },
+                { nome: 'Cinema', slug: 'cinema' },
+                { nome: 'Comunicação Social', slug: 'comunicacao-social' },
+                { nome: 'Dança', slug: 'danca' },
+                { nome: 'Design', slug: 'design' },
+                { nome: 'Filosofia', slug: 'filosofia' },
+                { nome: 'Gastronomia', slug: 'gastronomia' },
+                { nome: 'Humanas', slug: 'humanas' },
+                { nome: 'Jornalismo', slug: 'jornalismo' },
+                { nome: 'Língua Espanhola', slug: 'lingua-espanhola' },
+                { nome: 'Língua Inglesa', slug: 'lingua-inglesa' },
+                { nome: 'Língua Portuguesa', slug: 'lingua-portuguesa' },
+                { nome: 'Música', slug: 'musica' },
+                { nome: 'Sociologia', slug: 'sociologia' }
+            ]
+        },
+        tecnologia: {
+            nome: 'Tecnologia',
+            cursos: [
+                { nome: 'Ciência da Computação', slug: 'ciencia-da-computacao' },
+                { nome: 'Sistemas de Informação', slug: 'sistemas-de-informacao' },
+                { nome: 'Tecnologia', slug: 'tecnologia' }
+            ]
+        }
+    };
+
+    // ============================================
     // MENU MOBILE
     // ============================================
     const menuBtn = document.getElementById('mobile-menu-btn');
@@ -205,6 +325,102 @@
         }, { threshold: 0.5 });
 
         statElements.forEach(el => counterObserver.observe(el));
+    }
+
+    // ============================================
+    // SELETOR DE CATEGORIAS (NOVO)
+    // ============================================
+    const categoriaBtns = document.querySelectorAll('.categoria-btn');
+    const cursosContainer = document.getElementById('cursos-tags-container');
+    const categoriaAtivaNome = document.getElementById('categoria-ativa-nome');
+    const verTodosLink = document.getElementById('ver-todos-link');
+    const verTodosTexto = document.getElementById('ver-todos-texto');
+
+    function renderCursos(categoriaKey) {
+        const dados = cursosPorCategoria[categoriaKey];
+        if (!dados) return;
+
+        // Animação de saída
+        cursosContainer.classList.remove('fade-in');
+        cursosContainer.classList.add('fade-out');
+
+        setTimeout(() => {
+            // Limpa e renderiza novas tags
+            cursosContainer.innerHTML = '';
+            
+            dados.cursos.forEach(curso => {
+                const link = document.createElement('a');
+                link.href = `/cursos/${curso.slug}`;
+                link.className = 'px-5 py-2.5 border border-cyan-400/50 text-cyan-400 rounded-full font-medium text-sm hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300';
+                link.textContent = curso.nome;
+                link.rel = 'noopener noreferrer';
+                cursosContainer.appendChild(link);
+            });
+
+            // Atualiza título e link "ver todos"
+            categoriaAtivaNome.textContent = dados.nome;
+            verTodosTexto.textContent = `VER TODOS OS CURSOS DE ${dados.nome.toUpperCase()}`;
+            verTodosLink.href = `/categorias/${categoriaKey}`;
+
+            // Animação de entrada
+            cursosContainer.classList.remove('fade-out');
+            cursosContainer.classList.add('fade-in');
+        }, 300);
+    }
+
+    function atualizarEstadoAtivo(btnClicado) {
+        categoriaBtns.forEach(btn => {
+            const iconeDiv = btn.querySelector('div');
+            const iconeSvg = btn.querySelector('svg');
+            const nomeSpan = btn.querySelector('.categoria-nome');
+
+            // Remove estado ativo
+            btn.classList.remove('bg-cyan-400/10', 'border-cyan-400/30');
+            btn.classList.add('bg-white/5', 'border-white/10');
+            btn.removeAttribute('aria-current');
+
+            iconeDiv.classList.remove('bg-cyan-400/20');
+            iconeDiv.classList.add('bg-white/10');
+
+            iconeSvg.classList.remove('text-cyan-400');
+            iconeSvg.classList.add('text-gray-400');
+
+            nomeSpan.classList.remove('text-cyan-400', 'font-bold');
+            nomeSpan.classList.add('text-gray-400', 'font-medium');
+        });
+
+        // Adiciona estado ativo no botão clicado
+        const iconeDiv = btnClicado.querySelector('div');
+        const iconeSvg = btnClicado.querySelector('svg');
+        const nomeSpan = btnClicado.querySelector('.categoria-nome');
+
+        btnClicado.classList.remove('bg-white/5', 'border-white/10');
+        btnClicado.classList.add('bg-cyan-400/10', 'border-cyan-400/30');
+        btnClicado.setAttribute('aria-current', 'page');
+
+        iconeDiv.classList.remove('bg-white/10');
+        iconeDiv.classList.add('bg-cyan-400/20');
+
+        iconeSvg.classList.remove('text-gray-400');
+        iconeSvg.classList.add('text-cyan-400');
+
+        nomeSpan.classList.remove('text-gray-400', 'font-medium');
+        nomeSpan.classList.add('text-cyan-400', 'font-bold');
+    }
+
+    categoriaBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const categoria = this.dataset.categoria;
+            
+            atualizarEstadoAtivo(this);
+            renderCursos(categoria);
+        });
+    });
+
+    // Renderiza cursos iniciais (Educação)
+    if (cursosContainer) {
+        renderCursos('educacao');
     }
 
     // ============================================
