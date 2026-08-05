@@ -240,7 +240,38 @@
             }
         });
     });
+    const btnSobre = document.getElementById('btn-sobre');
+const secaoSobre = document.getElementById('secao-sobre');
+const btnFechar = document.getElementById('btn-fechar');
 
+// 1. Abrir a seção da FASUL
+btnSobre.addEventListener('click', () => {
+  secaoSobre.classList.remove('escondida');
+  secaoSobre.classList.add('visivel');
+  secaoSobre.scrollTop = 0; 
+  document.body.style.overflow = 'hidden'; 
+});
+
+// 2. Fechar pelo botão X
+btnFechar.addEventListener('click', fecharSecaoSobre);
+
+// 3. Monitorar a rolagem para fechar
+secaoSobre.addEventListener('scroll', () => {
+  const scrollAtual = secaoSobre.scrollTop; 
+  const alturaVisivel = secaoSobre.clientHeight; 
+  const alturaTotal = secaoSobre.scrollHeight; 
+
+  if (scrollAtual + alturaVisivel >= alturaTotal - 5) {
+    fecharSecaoSobre();
+  }
+});
+
+// Função central para fechar
+function fecharSecaoSobre() {
+  secaoSobre.classList.remove('visivel');
+  secaoSobre.classList.add('escondida');
+  document.body.style.overflow = ''; 
+}
     // ============================================
     // LAZY LOADING DE IMAGENS
     // ============================================
