@@ -5,11 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <!-- CSP Atualizada: Removido cdn.tailwindcss.com das diretrizes -->
-    <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self'; script-src 'self' https://unpkg.com https://s3.amazonaws.com https://cdn.vercel-insights.com 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://vitals.vercel-insights.com https://s3.amazonaws.com https://*.reclameaqui.com.br; frame-src 'self' https://*.reclameaqui.com.br; object-src 'none'; base-uri 'self'; form-action 'self';">
 
+    <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' https://cdn.tailwindcss.com https://unpkg.com https://s3.amazonaws.com https://cdn.vercel-insights.com 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://vitals.vercel-insights.com https://s3.amazonaws.com https://*.reclameaqui.com.br; frame-src 'self' https://*.reclameaqui.com.br; object-src 'none'; base-uri 'self'; form-action 'self';">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
     <title>FASUL - A Maior Campanha de Graduação e Pós-Graduação EAD do Brasil</title>
     <meta name="description"
@@ -19,8 +17,6 @@
     <meta name="robots" content="index, follow">
     <meta name="author" content="FASUL - Faculdade de Ensino Superior">
     <link rel="canonical" href="https://www.fasul.edu.br/">
-    
-    <!-- Open Graph & Twitter Tags (mantidos iguaizinhos) -->
     <meta property="og:title" content="FASUL - A Maior Campanha de Graduação e Pós-Graduação EAD do Brasil">
     <meta property="og:description"
         content="Mais de 2000 cursos EAD reconhecidos pelo MEC. Matrícula R$29,90 e mensalidades a partir de R$139,00. Estude 100% online.">
@@ -43,19 +39,31 @@
     <meta name="twitter:image"
         content="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200010/graduacao-em-administracao-capa-instituicao-20260414204758-Q5g9am-thumb.jpg">
     <meta name="twitter:image:alt" content="FASUL - Cursos de Graduação e Pós-Graduação EAD reconhecidos pelo MEC">
-
-    <!-- Pré-conexão e Fontes do Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-        
-    <!-- Seus estilos compilados (Substitui o script da CDN e o bloco tailwind.config) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'fasul-dark': '#0B132B',
+                        'fasul-cyan': '#06B6D4',
+                        'fasul-yellow': '#FFD700',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
     <link rel="stylesheet" href="css/style.css">
     
-    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
-
     <!-- Vercel Web Analytics -->
     <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 
@@ -1474,6 +1482,6 @@
         })();
     </script>
 
-    <script src="js/main.js" defer></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
