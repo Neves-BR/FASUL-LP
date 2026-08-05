@@ -55,6 +55,9 @@
         }
     </script>
 
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="css/style.css">
+
     <!-- Schema Markup JSON-LD -->
     <script type="application/ld+json">
     {
@@ -155,16 +158,14 @@
     <header class="fixed top-0 left-0 right-0 z-50 bg-fasul-dark/95 backdrop-blur-md border-b border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16 md:h-20">
-                <!-- Logo Placeholder -->
+                <!-- Logo -->
                 <a href="/" class="flex-shrink-0" aria-label="Página inicial da FASUL">
-                    <div class="w-32 h-10 bg-gray-700 rounded flex items-center justify-center">
-                        <div class="w-32 h-10 flex items-center justify-center">
-                            <img 
-                                src="https://www.fasuleducacional.edu.br/images/logo-v2.png" 
-                                alt="Logo FASUL" 
-                                class="w-full h-full object-contain"
-                            />
-                        </div>
+                    <div class="w-32 h-10 flex items-center justify-center">
+                        <img 
+                            src="images/logo-v2.png" 
+                            alt="Logo FASUL" 
+                            class="w-full h-full object-contain"
+                        />
                     </div>
                 </a>
 
@@ -643,14 +644,12 @@
             <div class="grid md:grid-cols-4 gap-8 md:gap-12">
                 <!-- Logo e Descrição -->
                 <div class="md:col-span-1">
-                    <div class="w-32 h-10 bg-gray-700 rounded flex items-center justify-center mb-4">
-                        <div class="w-32 h-10 flex items-center justify-center">
-                            <img 
-                                src="https://www.fasuleducacional.edu.br/images/logo-v2.png" 
-                                alt="Logo FASUL" 
-                                class="w-full h-full object-contain"
-                            />
-                        </div>
+                    <div class="w-32 h-10 flex items-center justify-center mb-4">
+                        <img 
+                            src="images/logo-v2.png" 
+                            alt="Logo FASUL" 
+                            class="w-full h-full object-contain"
+                        />
                     </div>
                     <p class="text-gray-400 text-sm leading-relaxed">
                         Faculdade de Ensino Superior com mais de 2000 cursos EAD reconhecidos pelo MEC. Transformando vidas através da educação digital.
@@ -717,39 +716,6 @@
     <!-- ============================================ -->
     <!-- SCRIPTS                                      -->
     <!-- ============================================ -->
-    <script>
-        // Menu Mobile Toggle
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            if (menuBtn && mobileMenu) {
-                menuBtn.addEventListener('click', function() {
-                    const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
-                    menuBtn.setAttribute('aria-expanded', !isExpanded);
-                    mobileMenu.classList.toggle('hidden');
-                });
-            }
-
-            // Smooth scroll para links internos
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    const href = this.getAttribute('href');
-                    if (href !== '#') {
-                        e.preventDefault();
-                        const target = document.querySelector(href);
-                        if (target) {
-                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                            // Fecha menu mobile se aberto
-                            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                                mobileMenu.classList.add('hidden');
-                                menuBtn.setAttribute('aria-expanded', 'false');
-                            }
-                        }
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
