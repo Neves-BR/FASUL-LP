@@ -40,11 +40,9 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap"></noscript>
-    <script>document.documentElement.classList.add('fonts-loaded');</script>
-    <!-- Dados de cursos carregam sob demanda -->
-    <link rel="prefetch" href="js/lazy/cursos-db.json" as="fetch">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
     <script defer src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -64,16 +62,10 @@
         }
     </script>
     <style>
-        /* Anti-FOUC: previne ícones gigantes e layout shift antes do Tailwind carregar */
-        svg { width: 1.5rem; height: 1.5rem; vertical-align: middle; flex-shrink: 0; }
-        svg[width] { width: attr(width); height: attr(height); }
-        img, video, iframe { max-width: 100%; height: auto; }
-        /* Reserva espaço para conteúdo dinâmico */
-        #cursos-tags-container { min-height: 120px; }
-        #busca-dropdown { min-height: 0; }
-        /* Previne layout shift de fontes */
-        html { font-family: system-ui, -apple-system, sans-serif; }
-        .fonts-loaded { font-family: 'Inter', 'Montserrat', system-ui, sans-serif; }
+          /* Previne flash de ícones gigantes antes do Tailwind carregar */
+          svg { width: 1.5em; height: 1.5em; vertical-align: middle; }
+          /* Ícones maiores */
+          svg.w-16, svg.w-16 { width: 4rem; height: 4rem; }
     </style>
     <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
     
@@ -227,7 +219,6 @@
         .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
     </style>
     <base target="_blank">
-<base target="_blank">
 </head>
 
 <body class="bg-fasul-dark text-white antialiased">
@@ -255,7 +246,7 @@
                 <button id="mobile-menu-btn"
                     class="lg:hidden p-2 rounded-md text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
                     aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobile-menu">
-                    <svg width="24" height="24" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
                 </button>
             </div>
         </div>
@@ -294,13 +285,13 @@
                             </div>
                         </div>
                         <div class="flex items-center gap-2 text-gray-300">
-                            <svg width="20" height="20" class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                             <span class="text-sm md:text-base">Taxa única de matrícula <strong class="text-white">R$29,90</strong></span>
                         </div>
                         <div class="bg-gradient-to-r from-yellow-500/20 to-yellow-600/10 border border-yellow-500/30 rounded-xl p-4 md:p-6">
                             <div class="flex items-start gap-3">
                                 <div class="flex-shrink-0 w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center">
-                                    <svg width="20" height="20" class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
+                                    <svg class="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
                                 </div>
                                 <div>
                                     <p class="font-bold text-yellow-400 text-sm md:text-base uppercase tracking-wide">MATRICULE-SE E GANHE:</p>
@@ -313,7 +304,7 @@
                                 class="inline-block w-full sm:w-auto px-8 py-4 bg-cyan-400 hover:bg-cyan-300 text-fasul-dark font-black text-lg md:text-xl uppercase tracking-wider rounded-xl transition-all duration-300 glow-cyan hover:scale-105 text-center"
                                 rel="noopener noreferrer">INSCREVA-SE JÁ</a>
                             <p class="text-gray-400 text-sm flex items-center gap-2 justify-center sm:justify-start">
-                                <svg width="16" height="16" class="w-4 h-4 text-red-400 animate-pulse" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+                                <svg class="w-4 h-4 text-red-400 animate-pulse" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
                                 Vagas limitadas
                             </p>
                         </div>
@@ -324,8 +315,8 @@
                             <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-3xl transform rotate-3"></div>
                             
                             <!-- Container da Imagem -->
-                            <div class="relative w-full h-full rounded-3xl flex items-center justify-center border border-white/10 overflow-hidden shadow-2xl" style="aspect-ratio: 4/5;">
-                                <img src="images/Aluno_sorrindo_Hero.webp" alt="Aluno sorrindo utilizando notebook durante aula online na plataforma FASUL de educação a distância" width="400" height="500" loading="eager" class="w-full h-full object-cover" fetchpriority="high" decoding="async" />
+                            <div class="relative w-full h-full rounded-3xl flex items-center justify-center border border-white/10 overflow-hidden shadow-2xl">
+                                <img src="images/Aluno_sorrindo_Hero.webp" alt="Aluno sorrindo utilizando notebook durante aula online na plataforma FASUL de educação a distância" width="400" height="500" loading="eager" class="w-full h-full object-cover" fetchpriority="high" />
                             </div>
                             
                             <!-- Badge flutuante -->
@@ -340,7 +331,7 @@
         </section>
 
         <!-- BARRA DE PESQUISA -->
-        <section class="relative z-10 -mt-6 md:-mt-8 px-4 sm:px-6 lg:px-8" aria-label="Busca de cursos" style="min-height: 120px;">
+        <section class="relative z-10 -mt-6 md:-mt-8 px-4 sm:px-6 lg:px-8" aria-label="Busca de cursos">
             <div class="max-w-4xl mx-auto">
                 <div class="bg-white rounded-2xl shadow-2xl p-4 md:p-6">
                     <form class="flex flex-col md:flex-row gap-3 md:gap-4" action="/buscar" method="GET" novalidate>
@@ -365,7 +356,7 @@
                         <button type="submit"
                             class="flex-shrink-0 px-6 py-3 bg-cyan-400 hover:bg-cyan-500 text-gray-900 font-bold rounded-xl transition-colors duration-200 flex items-center justify-center gap-2"
                             aria-label="Buscar cursos">
-                            <svg width="20" height="20" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
                             <span class="hidden sm:inline">Buscar</span>
                         </button>
                     </form>
@@ -404,7 +395,7 @@
                         class="categoria-btn group flex flex-col items-center p-4 md:p-6 rounded-xl bg-cyan-400/10 border border-cyan-400/30 hover:bg-cyan-400/20 transition-all duration-300"
                         aria-current="page" rel="noopener noreferrer">
                         <div class="w-12 h-12 md:w-14 md:h-14 bg-cyan-400/20 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                            <svg width="24" height="24" class="w-6 h-6 md:w-7 md:h-7 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                            <svg class="w-6 h-6 md:w-7 md:h-7 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
                         </div>
                         <span class="categoria-nome text-cyan-400 font-bold text-sm md:text-base text-center">Educação</span>
                     </a>
@@ -412,7 +403,7 @@
                         class="categoria-btn group flex flex-col items-center p-4 md:p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300"
                         rel="noopener noreferrer">
                         <div class="w-12 h-12 md:w-14 md:h-14 bg-white/10 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                            <svg width="24" height="24" class="w-6 h-6 md:w-7 md:h-7 text-gray-400 group-hover:text-cyan-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                            <svg class="w-6 h-6 md:w-7 md:h-7 text-gray-400 group-hover:text-cyan-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
                         </div>
                         <span class="categoria-nome text-gray-400 group-hover:text-cyan-400 font-medium text-sm md:text-base text-center transition-colors">Saúde</span>
                     </a>
@@ -420,7 +411,7 @@
                         class="categoria-btn group flex flex-col items-center p-4 md:p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300"
                         rel="noopener noreferrer">
                         <div class="w-12 h-12 md:w-14 md:h-14 bg-white/10 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                            <svg width="24" height="24" class="w-6 h-6 md:w-7 md:h-7 text-gray-400 group-hover:text-cyan-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                            <svg class="w-6 h-6 md:w-7 md:h-7 text-gray-400 group-hover:text-cyan-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
                         </div>
                         <span class="categoria-nome text-gray-400 group-hover:text-cyan-400 font-medium text-sm md:text-base text-center transition-colors">Gestão</span>
                     </a>
@@ -428,7 +419,7 @@
                         class="categoria-btn group flex flex-col items-center p-4 md:p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300"
                         rel="noopener noreferrer">
                         <div class="w-12 h-12 md:w-14 md:h-14 bg-white/10 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                            <svg width="24" height="24" class="w-6 h-6 md:w-7 md:h-7 text-gray-400 group-hover:text-cyan-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>
+                            <svg class="w-6 h-6 md:w-7 md:h-7 text-gray-400 group-hover:text-cyan-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>
                         </div>
                         <span class="categoria-nome text-gray-400 group-hover:text-cyan-400 font-medium text-sm md:text-base text-center transition-colors">Direito</span>
                     </a>
@@ -436,7 +427,7 @@
                         class="categoria-btn group flex flex-col items-center p-4 md:p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300"
                         rel="noopener noreferrer">
                         <div class="w-12 h-12 md:w-14 md:h-14 bg-white/10 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                            <svg width="24" height="24" class="w-6 h-6 md:w-7 md:h-7 text-gray-400 group-hover:text-cyan-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                            <svg class="w-6 h-6 md:w-7 md:h-7 text-gray-400 group-hover:text-cyan-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
                         </div>
                         <span class="categoria-nome text-gray-400 group-hover:text-cyan-400 font-medium text-sm md:text-base text-center transition-colors">Engenharia</span>
                     </a>
@@ -444,7 +435,7 @@
                         class="categoria-btn group flex flex-col items-center p-4 md:p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300"
                         rel="noopener noreferrer">
                         <div class="w-12 h-12 md:w-14 md:h-14 bg-white/10 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                            <svg width="24" height="24" class="w-6 h-6 md:w-7 md:h-7 text-gray-400 group-hover:text-cyan-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                            <svg class="w-6 h-6 md:w-7 md:h-7 text-gray-400 group-hover:text-cyan-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
                         </div>
                         <span class="categoria-nome text-gray-400 group-hover:text-cyan-400 font-medium text-sm md:text-base text-center transition-colors">Humanas</span>
                     </a>
@@ -452,7 +443,7 @@
                         class="categoria-btn group flex flex-col items-center p-4 md:p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300"
                         rel="noopener noreferrer">
                         <div class="w-12 h-12 md:w-14 md:h-14 bg-white/10 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                            <svg width="24" height="24" class="w-6 h-6 md:w-7 md:h-7 text-gray-400 group-hover:text-cyan-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            <svg class="w-6 h-6 md:w-7 md:h-7 text-gray-400 group-hover:text-cyan-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                         </div>
                         <span class="categoria-nome text-gray-400 group-hover:text-cyan-400 font-medium text-sm md:text-base text-center transition-colors">Tecnologia</span>
                     </a>
@@ -474,14 +465,14 @@
                         class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold text-sm md:text-base transition-colors"
                         rel="noopener noreferrer">
                         <span id="ver-todos-texto">VER TODOS OS CURSOS DE EDUCAÇÃO</span>
-                        <svg width="16" height="16" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                     </a>
                 </div>
             </div>
         </section>
 
         <!-- SEÇÃO GRADUAÇÃO - CARDS REAIS -->
-        <section class="py-16 md:py-24 bg-gray-900" aria-labelledby="graduacao-title" style="content-visibility: auto; contain-intrinsic-size: 0 2000px;">
+        <section class="py-16 md:py-24 bg-gray-900" aria-labelledby="graduacao-title">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
                     <h2 id="graduacao-title" class="text-2xl sm:text-3xl md:text-4xl font-black text-white uppercase tracking-tight mb-4">
@@ -497,7 +488,7 @@
                     <!-- Card: Administração -->
                     <article class="group bg-gray-800 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-400/10">
                         <a href="https://afiliadoeducacionalfasul.com.br/283082026/graduacao/graduacao-em-administracao-ead" class="block relative overflow-hidden" rel="noopener noreferrer">
-                            <img width="400" height="250" src="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200010/graduacao-em-administracao-capa-instituicao-20260414204758-Q5g9am-thumb.jpg" alt="Graduação em Administração" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                            <img src="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200010/graduacao-em-administracao-capa-instituicao-20260414204758-Q5g9am-thumb.jpg" alt="Graduação em Administração" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">GANHE 2 PÓS PARA VOCÊ +1 PARA UM AMIGO</div>
                         </a>
                         <div class="p-5">
@@ -505,19 +496,19 @@
                             <p class="text-gray-400 text-sm mb-4 line-clamp-2">Desenvolva competências em gestão, finanças, marketing e liderança para atuar em empresas e empreendimentos.</p>
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
                                     GRADUAÇÃO
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                     EAD
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                                     3.200 HORAS
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                     8 SEMESTRES
                                 </span>
                             </div>
@@ -534,7 +525,7 @@
                     <!-- Card: Análise e Desenvolvimento de Sistemas -->
                     <article class="group bg-gray-800 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-400/10">
                         <a href="https://afiliadoeducacionalfasul.com.br/283082026/graduacao/graduacao-em-analise-e-desenvolvimento-de-sistemas-ead" class="block relative overflow-hidden" rel="noopener noreferrer">
-                            <img width="400" height="250" src="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200016/graduacao-em-analise-e-desenvolvimento-de-sistemas-capa-instituicao-20260414204121-OavVXs-thumb.jpg" alt="Graduação em Análise e Desenvolvimento de Sistemas" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                            <img src="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200016/graduacao-em-analise-e-desenvolvimento-de-sistemas-capa-instituicao-20260414204121-OavVXs-thumb.jpg" alt="Graduação em Análise e Desenvolvimento de Sistemas" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">DESTAQUE PARA FULL STACK DEVELOPER</div>
                         </a>
                         <div class="p-5">
@@ -542,19 +533,19 @@
                             <p class="text-gray-400 text-sm mb-4 line-clamp-2">Aprenda programação, bancos de dados, engenharia de software e metodologias ágeis.</p>
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
                                     GRADUAÇÃO
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                     EAD
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                                     2.120 HORAS
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                     5 SEMESTRES
                                 </span>
                             </div>
@@ -571,7 +562,7 @@
                     <!-- Card: Ciências Contábeis -->
                     <article class="group bg-gray-800 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-400/10">
                         <a href="https://afiliadoeducacionalfasul.com.br/283082026/graduacao/graduacao-em-ciencias-contabeis" class="block relative overflow-hidden" rel="noopener noreferrer">
-                            <img width="400" height="250" src="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200017/graduacao-em-ciencias-contabeis-capa-instituicao-20260414203946-IHSfj8-thumb.jpg" alt="Graduação em Ciências Contábeis" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                            <img src="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200017/graduacao-em-ciencias-contabeis-capa-instituicao-20260414203946-IHSfj8-thumb.jpg" alt="Graduação em Ciências Contábeis" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">GANHE 2 PÓS PARA VOCÊ +1 PARA UM AMIGO</div>
                         </a>
                         <div class="p-5">
@@ -579,19 +570,19 @@
                             <p class="text-gray-400 text-sm mb-4 line-clamp-2">Formação para atuar em contabilidade, auditoria, controladoria e gestão tributária.</p>
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
                                     GRADUAÇÃO
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                     EAD
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                                     3.200 HORAS
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                     8 SEMESTRES
                                 </span>
                             </div>
@@ -608,7 +599,7 @@
                     <!-- Card: Gestão Comercial -->
                     <article class="group bg-gray-800 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-400/10">
                         <a href="https://afiliadoeducacionalfasul.com.br/283082026/graduacao/graduacao-em-gestao-comercial" class="block relative overflow-hidden" rel="noopener noreferrer">
-                            <img width="400" height="250" src="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200023/graduacao-em-gestao-comercial-capa-instituicao-20260414202739-XhBSoC-thumb.jpg" alt="Graduação em Gestão Comercial" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                            <img src="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200023/graduacao-em-gestao-comercial-capa-instituicao-20260414202739-XhBSoC-thumb.jpg" alt="Graduação em Gestão Comercial" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">GANHE 2 PÓS PARA VOCÊ +1 PARA UM AMIGO</div>
                         </a>
                         <div class="p-5">
@@ -616,19 +607,19 @@
                             <p class="text-gray-400 text-sm mb-4 line-clamp-2">Formação prática para atuar em estratégias de vendas, negociação e gestão de equipes.</p>
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
                                     GRADUAÇÃO
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                     EAD
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                                     1.800 HORAS
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                     4 SEMESTRES
                                 </span>
                             </div>
@@ -645,7 +636,7 @@
                     <!-- Card: Gestão da Tecnologia da Informação -->
                     <article class="group bg-gray-800 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-400/10">
                         <a href="https://afiliadoeducacionalfasul.com.br/283082026/graduacao/graduacao-em-gestao-da-tecnologia-da-informacao-ead" class="block relative overflow-hidden" rel="noopener noreferrer">
-                            <img width="400" height="250" src="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200018/graduacao-em-gestao-da-tecnologia-da-informacao-capa-instituicao-20260414203816-jGZe6M-thumb.jpg" alt="Graduação em Gestão da Tecnologia da Informação" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                            <img src="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200018/graduacao-em-gestao-da-tecnologia-da-informacao-capa-instituicao-20260414203816-jGZe6M-thumb.jpg" alt="Graduação em Gestão da Tecnologia da Informação" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">GANHE 1 PÓS COM DESTAQUE EM I.A.</div>
                         </a>
                         <div class="p-5">
@@ -653,19 +644,19 @@
                             <p class="text-gray-400 text-sm mb-4 line-clamp-2">Planeje e gerencie soluções de TI, governança, projetos, infraestrutura e segurança.</p>
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
                                     GRADUAÇÃO
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                     EAD
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                                     2.120 HORAS
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                     5 SEMESTRES
                                 </span>
                             </div>
@@ -682,7 +673,7 @@
                     <!-- Card: Gestão de Marketing -->
                     <article class="group bg-gray-800 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-400/10">
                         <a href="https://afiliadoeducacionalfasul.com.br/283082026/graduacao/graduacao-em-gestao-de-marketing" class="block relative overflow-hidden" rel="noopener noreferrer">
-                            <img width="400" height="250" src="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200014/graduacao-em-gestao-de-marketing-capa-instituicao-20260414204401-PpQvix-thumb.jpg" alt="Graduação em Gestão de Marketing" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                            <img src="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200014/graduacao-em-gestao-de-marketing-capa-instituicao-20260414204401-PpQvix-thumb.jpg" alt="Graduação em Gestão de Marketing" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">GANHE 2 PÓS PARA VOCÊ +1 PARA UM AMIGO</div>
                         </a>
                         <div class="p-5">
@@ -690,19 +681,19 @@
                             <p class="text-gray-400 text-sm mb-4 line-clamp-2">Aprenda a planejar campanhas, gerenciar marcas e atuar com marketing digital e análise de dados.</p>
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
                                     GRADUAÇÃO
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                     EAD
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                                     1.720 HORAS
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                     4 SEMESTRES
                                 </span>
                             </div>
@@ -719,7 +710,7 @@
                     <!-- Card: Gestão de Negócios Imobiliários -->
                     <article class="group bg-gray-800 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-400/10">
                         <a href="https://afiliadoeducacionalfasul.com.br/283082026/graduacao/graduacao-em-negocios-imobiliarios-ead" class="block relative overflow-hidden" rel="noopener noreferrer">
-                            <img width="400" height="250" src="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200021/graduacao-em-gestao-de-negocios-imobiliarios-capa-instituicao-20260414203337-O6nIsm-thumb.jpg" alt="Graduação em Gestão de Negócios Imobiliários" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                            <img src="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200021/graduacao-em-gestao-de-negocios-imobiliarios-capa-instituicao-20260414203337-O6nIsm-thumb.jpg" alt="Graduação em Gestão de Negócios Imobiliários" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">GANHE 2 PÓS PARA VOCÊ +1 PARA UM AMIGO</div>
                         </a>
                         <div class="p-5">
@@ -727,19 +718,19 @@
                             <p class="text-gray-400 text-sm mb-4 line-clamp-2">Formação prática em negociação, avaliação, legislação e gestão para o mercado imobiliário.</p>
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
                                     GRADUAÇÃO
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                     EAD
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                                     1.720 HORAS
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                     4 SEMESTRES
                                 </span>
                             </div>
@@ -756,7 +747,7 @@
                     <!-- Card: Gestão de Recursos Humanos -->
                     <article class="group bg-gray-800 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-400/10">
                         <a href="https://afiliadoeducacionalfasul.com.br/283082026/graduacao/graduacao-em-gestao-de-recursos-humanos-ead" class="block relative overflow-hidden" rel="noopener noreferrer">
-                            <img width="400" height="250" src="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200013/graduacao-em-gestao-de-recursos-humanos-capa-instituicao-20260414204530-S9RGX0-thumb.jpg" alt="Graduação em Gestão de Recursos Humanos" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                            <img src="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200013/graduacao-em-gestao-de-recursos-humanos-capa-instituicao-20260414204530-S9RGX0-thumb.jpg" alt="Graduação em Gestão de Recursos Humanos" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">GANHE 2 PÓS PARA VOCÊ +1 PARA UM AMIGO</div>
                         </a>
                         <div class="p-5">
@@ -764,19 +755,19 @@
                             <p class="text-gray-400 text-sm mb-4 line-clamp-2">Formação prática para planejar e gerir políticas de atração, desenvolvimento e retenção de talentos.</p>
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
                                     GRADUAÇÃO
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                     EAD
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                                     1.720 HORAS
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                     4 SEMESTRES
                                 </span>
                             </div>
@@ -793,7 +784,7 @@
                     <!-- Card: Gestão Financeira -->
                     <article class="group bg-gray-800 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-400/10">
                         <a href="https://afiliadoeducacionalfasul.com.br/283082026/graduacao/graduacao-em-gestao-financeira" class="block relative overflow-hidden" rel="noopener noreferrer">
-                            <img width="400" height="250" src="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200019/graduacao-em-gestao-financeira-capa-instituicao-20260414203640-rbkeKT-thumb.jpg" alt="Graduação em Gestão Financeira" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                            <img src="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200019/graduacao-em-gestao-financeira-capa-instituicao-20260414203640-rbkeKT-thumb.jpg" alt="Graduação em Gestão Financeira" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">GANHE 2 PÓS PARA VOCÊ +1 PARA UM AMIGO</div>
                         </a>
                         <div class="p-5">
@@ -801,19 +792,19 @@
                             <p class="text-gray-400 text-sm mb-4 line-clamp-2">Formação para planejar, analisar e controlar recursos financeiros em empresas, bancos e consultorias.</p>
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
                                     GRADUAÇÃO
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                     EAD
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                                     1.800 HORAS
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                     4 SEMESTRES
                                 </span>
                             </div>
@@ -830,7 +821,7 @@
                     <!-- Card: Gestão Pública -->
                     <article class="group bg-gray-800 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-400/10">
                         <a href="https://afiliadoeducacionalfasul.com.br/283082026/graduacao/graduacao-em-gestao-publica" class="block relative overflow-hidden" rel="noopener noreferrer">
-                            <img width="400" height="250" src="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200020/graduacao-em-gestao-publica-capa-instituicao-20260414203521-5j8Ijg-thumb.jpg" alt="Graduação em Gestão Pública" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                            <img src="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200020/graduacao-em-gestao-publica-capa-instituicao-20260414203521-5j8Ijg-thumb.jpg" alt="Graduação em Gestão Pública" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">GANHE 2 PÓS PARA VOCÊ +1 PARA UM AMIGO</div>
                         </a>
                         <div class="p-5">
@@ -838,19 +829,19 @@
                             <p class="text-gray-400 text-sm mb-4 line-clamp-2">Aprenda a planejar e gerir políticas públicas, orçamentos e contratos em órgãos públicos.</p>
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
                                     GRADUAÇÃO
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                     EAD
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                                     1.800 HORAS
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                     4 SEMESTRES
                                 </span>
                             </div>
@@ -867,7 +858,7 @@
                     <!-- Card: Logística -->
                     <article class="group bg-gray-800 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-400/10">
                         <a href="https://afiliadoeducacionalfasul.com.br/283082026/graduacao/graduacao-tecnologia-em-logistica-ead" class="block relative overflow-hidden" rel="noopener noreferrer">
-                            <img width="400" height="250" src="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200012/graduacao-em-logistica-capa-instituicao-20260414204642-q4wkwT-thumb.jpg" alt="Graduação em Logística" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                            <img src="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200012/graduacao-em-logistica-capa-instituicao-20260414204642-q4wkwT-thumb.jpg" alt="Graduação em Logística" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">GANHE 2 PÓS PARA VOCÊ +1 PARA UM AMIGO</div>
                         </a>
                         <div class="p-5">
@@ -875,19 +866,19 @@
                             <p class="text-gray-400 text-sm mb-4 line-clamp-2">Cadeia de suprimentos, transporte multimodal, armazenagem e tecnologia aplicada.</p>
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
                                     GRADUAÇÃO
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                     EAD
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                                     1.720 HORAS
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                     4 SEMESTRES
                                 </span>
                             </div>
@@ -904,7 +895,7 @@
                     <!-- Card: Pedagogia -->
                     <article class="group bg-gray-800 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-400/10">
                         <a href="https://afiliadoeducacionalfasul.com.br/283082026/graduacao/graduacao-em-pedagogia-ead" class="block relative overflow-hidden" rel="noopener noreferrer">
-                            <img width="400" height="250" src="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200024/graduacao-em-pedagogia-capa-instituicao-20260414202524-GnoT9Z-thumb.jpg" alt="Graduação em Pedagogia" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                            <img src="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200024/graduacao-em-pedagogia-capa-instituicao-20260414202524-GnoT9Z-thumb.jpg" alt="Graduação em Pedagogia" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">GANHE 2 PÓS PARA VOCÊ +1 PARA UM AMIGO</div>
                         </a>
                         <div class="p-5">
@@ -912,19 +903,19 @@
                             <p class="text-gray-400 text-sm mb-4 line-clamp-2">Formação para atuação na educação infantil, anos iniciais e gestão escolar.</p>
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
                                     GRADUAÇÃO
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                     SEMIPRESENCIAL
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                                     3.300 HORAS
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                     8 SEMESTRES
                                 </span>
                             </div>
@@ -941,7 +932,7 @@
                     <!-- Card: Processos Gerenciais -->
                     <article class="group bg-gray-800 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-400/10">
                         <a href="https://afiliadoeducacionalfasul.com.br/283082026/graduacao/graduacao-em-processos-gerenciais" class="block relative overflow-hidden" rel="noopener noreferrer">
-                            <img width="400" height="250" src="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200015/graduacao-em-processos-gerenciais-capa-instituicao-20260414204233-SZripD-thumb.jpg" alt="Graduação em Processos Gerenciais" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                            <img src="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200015/graduacao-em-processos-gerenciais-capa-instituicao-20260414204233-SZripD-thumb.jpg" alt="Graduação em Processos Gerenciais" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">GANHE 2 PÓS PARA VOCÊ +1 PARA UM AMIGO</div>
                         </a>
                         <div class="p-5">
@@ -949,19 +940,19 @@
                             <p class="text-gray-400 text-sm mb-4 line-clamp-2">Aprenda a planejar, analisar e otimizar processos administrativos para melhorar a eficiência.</p>
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
                                     GRADUAÇÃO
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                     EAD
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                                     1.720 HORAS
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                     4 SEMESTRES
                                 </span>
                             </div>
@@ -978,7 +969,7 @@
                     <!-- Card: Segurança Pública -->
                     <article class="group bg-gray-800 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-400/10">
                         <a href="https://afiliadoeducacionalfasul.com.br/283082026/graduacao/graduacao-em-seguranca-publica" class="block relative overflow-hidden" rel="noopener noreferrer">
-                            <img width="400" height="250" src="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200022/graduacao-em-seguranca-publica-capa-instituicao-20260414203039-Vmz6re-thumb.jpg" alt="Graduação em Segurança Pública" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                            <img src="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200022/graduacao-em-seguranca-publica-capa-instituicao-20260414203039-Vmz6re-thumb.jpg" alt="Graduação em Segurança Pública" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">GANHE 2 PÓS PARA VOCÊ +1 PARA UM AMIGO</div>
                         </a>
                         <div class="p-5">
@@ -986,19 +977,19 @@
                             <p class="text-gray-400 text-sm mb-4 line-clamp-2">Formação para atuar em gestão, prevenção e análise de riscos na segurança pública e privada.</p>
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
                                     GRADUAÇÃO
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                     EAD
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                                     1.800 HORAS
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                     4 SEMESTRES
                                 </span>
                             </div>
@@ -1015,7 +1006,7 @@
                     <!-- Card: Serviço Social -->
                     <article class="group bg-gray-800 rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-400/10">
                         <a href="https://afiliadoeducacionalfasul.com.br/283082026/graduacao/graduacao-em-servico-social" class="block relative overflow-hidden" rel="noopener noreferrer">
-                            <img width="400" height="250" src="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200025/graduacao-em-servico-social-capa-instituicao-20260414202358-_OVoaA-thumb.jpg" alt="Graduação em Serviço Social" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                            <img src="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200025/graduacao-em-servico-social-capa-instituicao-20260414202358-_OVoaA-thumb.jpg" alt="Graduação em Serviço Social" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                             <div class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">GANHE 2 PÓS PARA VOCÊ +1 PARA UM AMIGO</div>
                         </a>
                         <div class="p-5">
@@ -1023,19 +1014,19 @@
                             <p class="text-gray-400 text-sm mb-4 line-clamp-2">Formação para atuar em políticas públicas, saúde e terceiro setor.</p>
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
                                     GRADUAÇÃO
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                     SEMIPRESENCIAL
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                                     3.200 HORAS
                                 </span>
                                 <span class="inline-flex items-center gap-1 bg-white/10 text-gray-300 text-xs px-2 py-1 rounded-md">
-                                    <svg width="12" height="12" class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                                     8 SEMESTRES
                                 </span>
                             </div>
@@ -1057,7 +1048,7 @@
                         class="inline-flex items-center gap-2 px-8 py-4 bg-cyan-400 hover:bg-cyan-300 text-gray-900 font-bold text-sm md:text-base uppercase tracking-wider rounded-xl transition-all duration-300 glow-cyan"
                         rel="noopener noreferrer">
                         VER TODOS OS CURSOS DE GRADUAÇÃO
-                        <svg width="20" height="20" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                     </a>
                 </div>
             </div>
@@ -1079,7 +1070,7 @@
                         <a href="https://afiliadoeducacionalfasul.com.br/283082026/graduacao/cursos-graduacao-ead" rel="noopener noreferrer">
                             <div class="bg-gradient-to-br from-cyan-500/10 to-blue-600/10 rounded-2xl overflow-hidden aspect-[4/3] flex items-center justify-center border-2 border-dashed border-cyan-300 group-hover:border-cyan-500 transition-colors">
                                 <div class="text-center p-6">
-                                    <svg width="64" height="64" class="w-16 h-16 text-cyan-500 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                                    <svg class="w-16 h-16 text-cyan-500 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
                                     <h3 class="text-gray-900 font-bold text-xl">Graduação EAD</h3>
                                     <p class="text-gray-500 text-sm mt-2">Bacharelado e Tecnólogo 100% online</p>
                                 </div>
@@ -1090,7 +1081,7 @@
                         <a href="https://afiliadoeducacionalfasul.com.br/283082026/posgraduacao/cursos" rel="noopener noreferrer">
                             <div class="bg-gradient-to-br from-purple-500/10 to-pink-600/10 rounded-2xl overflow-hidden aspect-[4/3] flex items-center justify-center border-2 border-dashed border-purple-300 group-hover:border-purple-500 transition-colors">
                                 <div class="text-center p-6">
-                                    <svg width="64" height="64" class="w-16 h-16 text-purple-500 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                                    <svg class="w-16 h-16 text-purple-500 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
                                     <h3 class="text-gray-900 font-bold text-xl">Pós-Graduação EAD</h3>
                                     <p class="text-gray-500 text-sm mt-2">Especializações e MBA reconhecidos pelo MEC</p>
                                 </div>
@@ -1101,7 +1092,7 @@
                         <a href="https://afiliadoeducacionalfasul.com.br/283082026/cursos-livres" rel="noopener noreferrer">
                             <div class="bg-gradient-to-br from-yellow-500/10 to-orange-600/10 rounded-2xl overflow-hidden aspect-[4/3] flex items-center justify-center border-2 border-dashed border-yellow-300 group-hover:border-yellow-500 transition-colors">
                                 <div class="text-center p-6">
-                                    <svg width="64" height="64" class="w-16 h-16 text-yellow-500 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                                    <svg class="w-16 h-16 text-yellow-500 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
                                     <h3 class="text-gray-900 font-bold text-xl">Cursos Livres</h3>
                                     <p class="text-gray-500 text-sm mt-2">Extensão e capacitação profissional</p>
                                 </div>
@@ -1126,7 +1117,7 @@
       <!-- Card 1: PROUNI -->
       <div class="card">
         <div class="card-image">
-          <img src="images/prouni.webp" alt="Logo do Programa PROUNI - bolsas de até 100%" width="150" height="100" loading="lazy" decoding="async" />
+          <img src="images/prouni.webp" alt="Logo do Programa PROUNI - bolsas de até 100%" width="150" height="100" loading="lazy" />
         </div>
         <div class="card-content">
           <h3>Programa PROUNI</h3>
@@ -1137,7 +1128,7 @@
       <!-- Card 2: FIES -->
       <div class="card">
         <div class="card-image">
-          <img src="images/fies.webp" alt="Logo Novo FIES - financiamento estudantil" width="150" height="100" loading="lazy" decoding="async" />
+          <img src="images/fies.webp" alt="Logo Novo FIES - financiamento estudantil" width="150" height="100" loading="lazy" />
         </div>
         <div class="card-content">
           <h3>FIES</h3>
@@ -1148,7 +1139,7 @@
       <!-- Card 3: FASUL -->
       <div class="card">
         <div class="card-image">
-          <img src="images/fasul.webp" alt="Logo Fasul Educacional - parcelamento sem juros" width="150" height="100" loading="lazy" decoding="async" />
+          <img src="images/fasul.webp" alt="Logo Fasul Educacional - parcelamento sem juros" width="150" height="100" loading="lazy" />
         </div>
         <div class="card-content">
           <h3>Parcelamento da Fasul Educacional</h3>
@@ -1167,7 +1158,7 @@
                     <details class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden group">
                         <summary class="px-6 py-4 font-semibold text-gray-900 cursor-pointer flex items-center justify-between hover:bg-gray-50 transition-colors">
                             Os cursos da FASUL são reconhecidos pelo MEC?
-                            <svg width="20" height="20" class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </summary>
                         <div class="px-6 pb-4 text-gray-600 leading-relaxed">
                             Sim, todos os cursos de graduação e pós-graduação da FASUL são reconhecidos pelo MEC (Ministério da Educação) e possuem certificação válida em todo o território nacional. Nossos certificados têm o mesmo valor legal que os de instituições presenciais.
@@ -1176,7 +1167,7 @@
                     <details class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden group">
                         <summary class="px-6 py-4 font-semibold text-gray-900 cursor-pointer flex items-center justify-between hover:bg-gray-50 transition-colors">
                             Quanto tempo leva para receber o certificado?
-                            <svg width="20" height="20" class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </summary>
                         <div class="px-6 pb-4 text-gray-600 leading-relaxed">
                             Os certificados de pós-graduação são emitidos a partir de 2 meses de conclusão do curso. A graduação segue a carga horária regulamentada pelo MEC, e o diploma é expedido após a conclusão de todos os módulos e aprovação na avaliação final.
@@ -1185,7 +1176,7 @@
                     <details class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden group">
                         <summary class="px-6 py-4 font-semibold text-gray-900 cursor-pointer flex items-center justify-between hover:bg-gray-50 transition-colors">
                             Posso estudar 100% online?
-                            <svg width="20" height="20" class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </summary>
                         <div class="px-6 pb-4 text-gray-600 leading-relaxed">
                             Sim! A FASUL oferece modalidade 100% EAD (Ensino a Distância), permitindo que você estude de qualquer lugar do Brasil, no horário que for mais conveniente para você. Nossa plataforma está disponível 24 horas por dia, 7 dias por semana.
@@ -1194,7 +1185,7 @@
                     <details class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden group">
                         <summary class="px-6 py-4 font-semibold text-gray-900 cursor-pointer flex items-center justify-between hover:bg-gray-50 transition-colors">
                             Qual o valor da mensalidade?
-                            <svg width="20" height="20" class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </summary>
                         <div class="px-6 pb-4 text-gray-600 leading-relaxed">
                             As mensalidades da graduação EAD começam a partir de R$ 139,00/mês, valores fixos até o final do curso. A taxa única de matrícula é de apenas R$ 29,90. Consulte nossas condições especiais de pagamento e descontos para pagamento antecipado.
@@ -1212,7 +1203,7 @@
             <div class="grid md:grid-cols-4 gap-8 md:gap-12">
                 <div class="md:col-span-1">
                     <div class="w-32 h-10 flex items-center justify-center mb-4">
-                        <img src="images/logo-v2.png" alt="Logo FASUL - Faculdade de Ensino Superior" width="128" height="40" loading="lazy" decoding="async" class="w-full h-full object-contain" />
+                        <img src="images/logo-v2.png" alt="Logo FASUL - Faculdade de Ensino Superior" width="128" height="40" loading="lazy" class="w-full h-full object-contain" />
                     </div>
                     <p class="text-gray-400 text-sm leading-relaxed mb-6">
                         Faculdade de Ensino Superior com mais de 2000 cursos EAD reconhecidos pelo MEC. Transformando vidas através da educação digital.
@@ -1250,7 +1241,7 @@
                            rel="noopener noreferrer" 
                            class="inline-block hover:opacity-90 transition-opacity" 
                            aria-label="Link para o perfil verificado da FASUL no Reclame Aqui">
-                            <img width="40" height="40" src="images/verified.svg" alt="Selo Verificada por Reclame Aqui" class="h-10 w-auto object-contain">
+                            <img src="images/verified.svg" alt="Selo Verificada por Reclame Aqui" class="h-10 w-auto object-contain">
                             <p>Verificada por Reclame Aqui</p>
                         </a>
                     
@@ -1260,7 +1251,7 @@
                            rel="noopener noreferrer" 
                            class="inline-block hover:opacity-90 transition-opacity"
                            aria-label="Link para a reputação Ótimo da FASUL no Reclame Aqui">
-                            <img width="40" height="40" src="images/otimo.svg" alt="Selo Ótimo Reclame Aqui" class="h-10 w-auto object-contain">
+                            <img src="images/otimo.svg" alt="Selo Ótimo Reclame Aqui" class="h-10 w-auto object-contain">
                             <p>Selo Ótimo Reclame Aqui</p>
                         </a>
                     </div>
@@ -1273,7 +1264,7 @@
                     <a href="https://www.weemake.com.br"
                        target="_blank"
                        rel="noopener noreferrer">
-                        <img src="images/WeeMake Dark.png" alt="WeeMake - desenvolvimento web e agência digital" width="230" height="50" loading="lazy" decoding="async">
+                        <img src="images/WeeMake Dark.png" alt="WeeMake - desenvolvimento web e agência digital" width="230" height="50" loading="lazy">
                     </a>
                 </div>
             </div>
@@ -1478,7 +1469,7 @@
                            rel="noopener noreferrer"
                            target="_blank">
                             <div class="flex items-center gap-2">
-                                <svg width="16" height="16" class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
                                 </svg>
                                 <span class="font-medium">${curso.nome}</span>
@@ -1598,7 +1589,7 @@
             });
         })();
     </script>
-    
+
     <script defer src="js/main.js"></script>
 </body>
 </html>
