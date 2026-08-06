@@ -43,7 +43,8 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap"></noscript>
     <script>document.documentElement.classList.add('fonts-loaded');</script>
-
+    <!-- Dados de cursos carregam sob demanda -->
+    <link rel="prefetch" href="js/lazy/cursos-db.json" as="fetch">
     <link rel="stylesheet" href="css/style.css">
     <script defer src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -1597,7 +1598,7 @@
             });
         })();
     </script>
-
+    
     <script defer src="js/main.js"></script>
 </body>
 </html>
