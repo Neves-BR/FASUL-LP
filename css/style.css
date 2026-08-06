@@ -42,11 +42,7 @@ body {
 .glow-yellow {
     box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
 }
-.bg-fasul-yellow,
-[class*="bg-fasul-yellow"] {
-    background-color: #FFD700 !important;
-    color: #111827 !important;
-}
+
 /* Animações */
 @keyframes pulse {
     0%, 100% { opacity: 1; }
@@ -803,6 +799,11 @@ body {
     font-size: 10px;
     line-height: 13px;
     margin-top: 0
+}
+.bg-fasul-yellow,
+[class*="bg-fasul-yellow"] {
+    background-color: #FFD700 !important;
+    color: #111827 !important;
 }
 /* ============================================ */
 /* ACESSIBILIDADE                               */
