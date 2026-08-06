@@ -1,224 +1,41 @@
 # FASUL - Faculdade de Ensino Superior
 
-> Landing page institucional para a FASUL, oferecendo graduação e pós-graduação EAD reconhecidos pelo MEC. Construída com HTML estático, Tailwind CSS e JavaScript vanilla, hospedada na Vercel.
+&gt; A FASUL oferece mais de 2000 cursos de graduação e pós-graduação EAD reconhecidos pelo MEC, com preços acessíveis, flexibilidade de horários e certificação válida em todo o território nacional.
 
-## Visão Geral
+## Graduação EAD
 
-A FASUL (Faculdade de Ensino Superior) é uma instituição de ensino superior que oferece mais de 2000 cursos de graduação e pós-graduação na modalidade EAD (Ensino a Distância), todos reconhecidos pelo MEC. Esta landing page tem como objetivo converter visitantes em alunos matriculados, destacando preços acessíveis, flexibilidade de horários e certificação válida em todo o território nacional.
+- [Administração](https://afiliadoeducacionalfasul.com.br/283082026/graduacao/graduacao-em-administracao-ead): Curso de graduação em Administração à distância.
+- [Análise e Desenvolvimento de Sistemas](https://afiliadoeducacionalfasul.com.br/283082026/graduacao/graduacao-em-analise-e-desenvolvimento-de-sistemas-ead): Curso superior em tecnologia da informação.
+- [Ciências Contábeis](https://afiliadoeducacionalfasul.com.br/283082026/graduacao/graduacao-em-ciencias-contabeis): Curso de graduação em Ciências Contábeis EAD.
+- [Gestão Comercial](https://afiliadoeducacionalfasul.com.br/283082026/graduacao/graduacao-em-gestao-comercial): Curso de graduação em Gestão Comercial à distância.
+- [Gestão da Tecnologia da Informação](https://afiliadoeducacionalfasul.com.br/283082026/graduacao/graduacao-em-gestao-da-tecnologia-da-informacao-ead): Curso de graduação em Gestão de TI EAD.
+- [Gestão de Marketing](https://afiliadoeducacionalfasul.com.br/283082026/graduacao/graduacao-em-gestao-de-marketing): Curso de graduação em Marketing EAD.
+- [Gestão de Negócios Imobiliários](https://afiliadoeducacionalfasul.com.br/283082026/graduacao/graduacao-em-negocios-imobiliarios-ead): Curso de graduação em Negócios Imobiliários EAD.
+- [Gestão de Recursos Humanos](https://afiliadoeducacionalfasul.com.br/283082026/graduacao/graduacao-em-gestao-de-recursos-humanos-ead): Curso de graduação em RH EAD.
+- [Gestão Financeira](https://afiliadoeducacionalfasul.com.br/283082026/graduacao/graduacao-em-gestao-financeira): Curso de graduação em Gestão Financeira EAD.
+- [Gestão Pública](https://afiliadoeducacionalfasul.com.br/283082026/graduacao/graduacao-em-gestao-publica): Curso de graduação em Gestão Pública EAD.
+- [Logística](https://afiliadoeducacionalfasul.com.br/283082026/graduacao/graduacao-tecnologia-em-logistica-ead): Curso superior em Logística EAD.
+- [Pedagogia](https://afiliadoeducacionalfasul.com.br/283082026/graduacao/graduacao-em-pedagogia-ead): Curso de graduação em Pedagogia EAD.
+- [Processos Gerenciais](https://afiliadoeducacionalfasul.com.br/283082026/graduacao/graduacao-em-processos-gerenciais): Curso de graduação em Processos Gerenciais EAD.
+- [Segurança Pública](https://afiliadoeducacionalfasul.com.br/283082026/graduacao/graduacao-em-seguranca-publica): Curso de graduação em Segurança Pública EAD.
+- [Serviço Social](https://afiliadoeducacionalfasul.com.br/283082026/graduacao/graduacao-em-servico-social): Curso de graduação em Serviço Social EAD.
 
-- **URL canônica**: https://www.fasul.edu.br/
-- **Deploy**: https://fasul-lp.vercel.app/
-- **Stack**: HTML estático, Tailwind CSS (CDN), JavaScript vanilla
-- **Analytics**: Vercel Web Analytics
-- **Autor**: WeeMake (https://www.weemake.com.br)
+## Pós-Graduação
 
-## Estrutura do Projeto
+- [Direito](https://afiliadoeducacionalfasul.com.br/283082026/posgraduacao/categoria/direito): Cursos de especialização e MBA na área jurídica.
+- [Educação](https://afiliadoeducacionalfasul.com.br/283082026/posgraduacao/categoria/educacao): Cursos de pós-graduação na área de educação.
+- [Engenharia](https://afiliadoeducacionalfasul.com.br/283082026/posgraduacao/categoria/engenharia): Cursos de especialização em engenharia.
+- [Gestão](https://afiliadoeducacionalfasul.com.br/283082026/posgraduacao/categoria/gestao): Cursos de MBA e especialização em gestão.
+- [Humanas](https://afiliadoeducacionalfasul.com.br/283082026/posgraduacao/categoria/humanas): Cursos de pós-graduação em ciências humanas.
+- [Saúde](https://afiliadoeducacionalfasul.com.br/283082026/posgraduacao/categoria/saude): Cursos de especialização na área da saúde.
+- [Tecnologia](https://afiliadoeducacionalfasul.com.br/283082026/posgraduacao/categoria/tecnologia): Cursos de pós-graduação em tecnologia.
 
-```
-FASUL-LP/
-├── index.html          # Página única (~151 KB) — landing page completa
-├── css/
-│   └── style.css       # Tailwind CSS compilado e minificado (~20 KB)
-├── js/
-│   └── main.js         # Scripts de interatividade
-├── images/             # Assets locais (logo, parceiros, hero)
-│   ├── logo-v2.png
-│   ├── favicon.png
-│   ├── Aluno_sorrindo_Hero.webp
-│   ├── prouni.webp
-│   ├── fies.webp
-│   ├── fasul.webp
-│   └── WeeMake Dark.png
-├── sitemap.xml         # Sitemap para SEO
-├── robots.txt          # Diretivas de rastreamento
-├── package.json        # Dependências (Vercel Analytics)
-└── package-lock.json
-```
+## Institucional
 
-## Seções da Landing Page
+- [Site oficial](https://www.fasul.edu.br/): Página institucional da FASUL com informações sobre cursos, matrículas e certificação.
+- [Sobre a FASUL](https://www.fasul.edu.br/#sobre): Informações institucionais sobre a faculdade, reconhecimento MEC e diferenciais.
+- [Bolsas e Financiamento](https://www.fasul.edu.br/#bolsas-financiamento): Informações sobre PROUNI, FIES e Fasul Educacional.
 
-| Seção | ID / Aria-Label | Descrição |
-|-------|-------------------|-----------|
-| **Header/Nav** | — | Fixo, backdrop-blur, com logo + navegação desktop/mobile |
-| **Hero** | `hero-title` | CTA principal, preço promocional, imagem do aluno |
-| **Busca de Cursos** | — | Select de tipo + input de busca com botão de pesquisa |
-| **Benefícios** | `beneficios-title` | Diferenciais da instituição (2000+ cursos, MEC, etc.) |
-| **Categorias** | `categorias` | Grid de categorias de pós-graduação (Direito, Educação, Gestão, etc.) |
-| **Cursos Dinâmico** | `cursos-dinamico` | Lista de cursos da categoria ativa, carregada via JS |
-| **Graduação** | `graduacao-title` | Catálogo de 15 cursos de graduação EAD com cards |
-| **Escolha FASUL** | `escolha-title` | Razões para escolher a instituição |
-| **Bolsas/Financiamento** | `bolsas-financiamento` | PROUNI, FIES, Fasul Educacional |
-| **FAQ** | `faq-title` | Perguntas frequentes com acordeão interativo |
-| **Sobre** | `secao-sobre` | Modal expansível com informações institucionais |
-| **Footer** | — | Logo, links, selos, crédito WeeMake |
+## Contato
 
-## Tecnologias e Dependências
-
-| Tecnologia | Versão / Origem | Uso |
-|------------|-----------------|-----|
-| Tailwind CSS | v3 (CDN: `cdn.tailwindcss.com`) | Estilização utilitária com config custom inline |
-| Google Fonts | Inter + Montserrat (400–900) | Tipografia principal |
-| Vercel Analytics | ^2.0.1 | Métricas de uso e performance |
-| Lucide Icons | Inline SVG | Ícones da interface (sem dependência externa) |
-
-### Configuração Tailwind (inline no HTML)
-
-```javascript
-tailwind.config = {
-    theme: {
-        extend: {
-            colors: {
-                'fasul-dark':   '#0B132B',
-                'fasul-cyan':   '#06B6D4',
-                'fasul-yellow': '#FFD700',
-            },
-            fontFamily: {
-                'sans': ['Inter', 'Montserrat', 'sans-serif'],
-            }
-        }
-    }
-}
-```
-
-## Design System
-
-### Paleta de Cores
-
-| Token | Hex | Uso |
-|-------|-----|-----|
-| `--fasul-dark` | `#0B132B` | Fundo principal, header, seções escuras |
-| `--fasul-cyan` | `#06B6D4` | CTAs, links, destaques, acentos |
-| `--fasul-yellow` | `#FFD700` | Promoções, badges de desconto, alertas |
-| `gray-900` | `#111827` | Seções alternadas claras |
-| `white` | `#FFFFFF` | Texto principal sobre fundos escuros |
-
-### Tipografia
-
-- **Fonte primária**: Inter (400–900)
-- **Fonte secundária**: Montserrat (400–900)
-- **H1 Hero**: 3xl → 6xl, font-black, tracking-tight
-- **H2 Seções**: 2xl → 5xl, font-black, uppercase, tracking-tight
-- **Body**: text-sm → text-base, text-gray-300
-
-### Componentes Reutilizáveis
-
-- **Botão primário**: `bg-cyan-400 hover:bg-cyan-300 text-fasul-dark font-black uppercase rounded-xl glow-cyan`
-- **Botão outline**: `border-cyan-400 text-cyan-400 hover:bg-cyan-400/10`
-- **Card curso**: `bg-gray-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl`
-- **Badge**: `bg-fasul-yellow text-gray-900 px-3 py-1 rounded-lg font-bold`
-- **Input**: `w-full px-4 py-3 bg-gray-100 text-gray-900 rounded-xl focus:ring-2 focus:ring-cyan-400`
-
-## Funcionalidades JavaScript (main.js)
-
-| Funcionalidade | Descrição |
-|----------------|-----------|
-| **Menu Mobile** | Toggle do menu hambúrguer (`mobile-menu-btn` / `mobile-menu`) |
-| **Busca de Cursos** | Filtro por tipo (graduação/pós) + busca textual |
-| **Categorias Dinâmicas** | Carregamento assíncrono de cursos por categoria selecionada |
-| **FAQ Acordeão** | Expansão/colapso de perguntas com animação |
-| **Modal Sobre** | Abre/fecha seção institucional (`btn-sobre` / `btn-fechar`) |
-| **Scroll Suave** | Navegação âncora com easing |
-| **Animações** | IntersectionObserver para fade-in e slide-up |
-
-## Cursos de Graduação EAD (Cards)
-
-| Curso | Link Afiliado |
-|-------|---------------|
-| Administração | `/graduacao-em-administracao-ead` |
-| Análise e Desenvolvimento de Sistemas | `/graduacao-em-analise-e-desenvolvimento-de-sistemas-ead` |
-| Ciências Contábeis | `/graduacao-em-ciencias-contabeis` |
-| Gestão Comercial | `/graduacao-em-gestao-comercial` |
-| Gestão da Tecnologia da Informação | `/graduacao-em-gestao-da-tecnologia-da-informacao-ead` |
-| Gestão de Marketing | `/graduacao-em-gestao-de-marketing` |
-| Gestão de Negócios Imobiliários | `/graduacao-em-negocios-imobiliarios-ead` |
-| Gestão de Recursos Humanos | `/graduacao-em-gestao-de-recursos-humanos-ead` |
-| Gestão Financeira | `/graduacao-em-gestao-financeira` |
-| Gestão Pública | `/graduacao-em-gestao-publica` |
-| Logística | `/graduacao-tecnologia-em-logistica-ead` |
-| Pedagogia | `/graduacao-em-pedagogia-ead` |
-| Processos Gerenciais | `/graduacao-em-processos-gerenciais` |
-| Segurança Pública | `/graduacao-em-seguranca-publica` |
-| Serviço Social | `/graduacao-em-servico-social` |
-
-*Base afiliada:* `https://afiliadoeducacionalfasul.com.br/283082026/graduacao/`
-
-## Categorias de Pós-Graduação
-
-- Direito
-- Educação
-- Engenharia
-- Gestão
-- Humanas
-- Saúde
-- Tecnologia
-
-*Base afiliada:* `https://afiliadoeducacionalfasul.com.br/283082026/posgraduacao/categoria/`
-
-## SEO e Metadados
-
-- **Title**: `FASUL - A Melhor Faculdade de Graduação e Pós-Graduação EAD do Brasil`
-- **Description**: Foco em preço, MEC, flexibilidade e 2000+ cursos
-- **Canonical**: `https://www.fasul.edu.br/`
-- **OG/Twitter**: Imagem de capa, título, description configurados
-- **Robots**: `index, follow`
-- **Keywords**: cursos EAD, pós-graduação online, MEC, graduação EAD, ensino a distância
-
-### Structured Data (Schema.org)
-
-- `Organization` — dados institucionais, redes sociais
-- `EducationalOrganization` — descrição acadêmica
-- `LocalBusiness` — endereço (Rua Dr. Melo Viana, 75 — São Lourenço/MG)
-- `BreadcrumbList` — navegação estruturada
-- `FAQPage` — 4 perguntas frequentes com respostas
-- `Course` — dados de graduação EAD
-
-## Performance e Otimizações
-
-| Aspecto | Status | Detalhe |
-|---------|--------|---------|
-| Lazy loading | ✅ | 20/24 imagens com `loading="lazy"` |
-| Hero priority | ✅ | `fetchpriority="high"` na imagem principal |
-| Script defer | ✅ | Tailwind CDN + Vercel Analytics com `defer` |
-| Preconnect | ✅ | `fonts.googleapis.com` e `fonts.gstatic.com` |
-| CSS minificado | ✅ | `css/style.css` (~20 KB) |
-| CSP | ✅ | Content Security Policy configurado |
-| HTML size | ⚠️ | ~151 KB — considerar code splitting futuro |
-| Responsive images | ❌ | Sem `srcset`/`sizes` — oportunidade de melhoria |
-| Image format | ⚠️ | Cursos usam JPEG externo; hero usa WebP |
-
-## Integrações Externas
-
-| Serviço | URL | Finalidade |
-|---------|-----|------------|
-| Hub Educacional | `hubeducacional.fasulpagamentos.com.br` | Imagens de capa dos cursos |
-| Vercel Insights | `vitals.vercel-insights.com` | Web Analytics |
-| Reclame Aqui | `*.reclameaqui.com.br` | Selo de reputação |
-| MEC/EMEC | `emec.mec.gov.br` | Consulta de cadastro institucional |
-| WhatsApp | `wa.me` | Contato direto via CTA |
-| Afiliados | `afiliadoeducacionalfasul.com.br` | Redirecionamento para matrícula |
-
-## Scripts de Build
-
-```bash
-# Desenvolvimento CSS (watch)
-npm run watch:css
-# tailwindcss -i ./src/input.css -o ./css/style.css --watch
-
-# Build produção (minificado)
-npm run build:css
-# tailwindcss -i ./src/input.css -o ./css/style.css --minify
-```
-
-## Deploy
-
-Deploy automático via Vercel a cada push na branch `main`.
-
-## Notas para Desenvolvedores
-
-- Landing page **single-page** — navegação por scroll suave entre seções
-- Sem framework JS (React/Vue) — vanilla JavaScript puro
-- Ícones são **SVG inline** do Lucide (sem chamada de CDN de ícones)
-- Formulários usam `mailto:` e `https://wa.me/` para conversão direta
-- O arquivo `index.html` é monolítico; todo o conteúdo está inline
-- A seção "Sobre" (`secao-sobre`) é um modal controlado por JS (`btn-sobre` / `btn-fechar`)
-- O carrossel/slider de cursos é controlado por estado JS (`categoria-ativa-nome`, `cursos-tags-container`)
+- [WhatsApp](https://wa.me/): Canal de atendimento direto para dúvidas e matrículas.
