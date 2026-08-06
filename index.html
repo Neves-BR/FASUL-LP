@@ -37,12 +37,13 @@
     <meta name="twitter:title" content="FASUL - A Melhor Faculdade de Graduação e Pós-Graduação EAD do Brasil">
     <meta name="twitter:description" content="Mais de 20000 cursos EAD reconhecidos pelo MEC. Matrícula R$29,90 e mensalidades a partir de R$139,00.">
     <meta name="twitter:image" content="https://hubeducacional.fasulpagamentos.com.br/uploads/courses/institutions/1/200010/graduacao-em-administracao-capa-instituicao-20260414204758-Q5g9am-thumb.jpg">
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script defer src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -66,39 +67,99 @@
     <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "CollegeOrUniversity",
-                "name": "FASUL - Faculdade de Ensino Superior",
-                "url": "https://www.fasul.edu.br",
-                "logo": "https://www.fasuleducacional.edu.br/images/logo-v2.png",
-                "description": "Instituição de ensino superior oferecendo graduação e pós-graduação EAD reconhecidos pelo MEC.",
-                "address": {"@type": "PostalAddress", "addressCountry": "BR"},
-                "sameAs": ["https://www.facebook.com/fasul", "https://www.instagram.com/fasul", "https://www.linkedin.com/school/fasul"]
-            },
-            {
-                "@type": "Course",
-                "name": "Graduação EAD FASUL",
-                "description": "Cursos de graduação a distância reconhecidos pelo MEC com certificação válida em todo o território nacional.",
-                "provider": {"@type": "CollegeOrUniversity", "name": "FASUL"},
-                "courseMode": "online",
-                "educationalCredentialAwarded": "Certificado de Graduação reconhecido pelo MEC",
-                "offers": {"@type": "Offer", "price": "139.00", "priceCurrency": "BRL", "availability": "https://schema.org/InStock"}
-            },
-            {
-                "@type": "Course",
-                "name": "Pós-Graduação EAD FASUL",
-                "description": "Mais de 2000 cursos de pós-graduação lato sensu a distância com certificação MEC.",
-                "provider": {"@type": "CollegeOrUniversity", "name": "FASUL"},
-                "courseMode": "online",
-                "educationalCredentialAwarded": "Certificado de Pós-Graduação reconhecido pelo MEC",
-                "offers": {"@type": "Offer", "price": "139.00", "priceCurrency": "BRL", "availability": "https://schema.org/InStock"}
-            }
-        ]
-    }
-    </script>
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Organization",
+                    "@id": "https://www.fasul.edu.br/#organization",
+                    "name": "FASUL - Faculdade de Ensino Superior",
+                    "url": "https://www.fasul.edu.br",
+                    "logo": "https://www.fasul.edu.br/images/logo-v2.png",
+                    "description": "Instituição de ensino superior oferecendo graduação e pós-graduação EAD reconhecidos pelo MEC.",
+                    "sameAs": ["https://www.facebook.com/fasul", "https://www.instagram.com/fasul", "https://www.linkedin.com/school/fasul"],
+                    "contactPoint": {
+                        "@type": "ContactPoint",
+                        "contactType": "Atendimento ao Aluno",
+                        "availableLanguage": "Portuguese"
+                    }
+                },
+                {
+                    "@type": "EducationalOrganization",
+                    "name": "FASUL - Faculdade de Ensino Superior",
+                    "url": "https://www.fasul.edu.br",
+                    "logo": "https://www.fasul.edu.br/images/logo-v2.png",
+                    "description": "Faculdade de Ensino Superior com mais de 2000 cursos EAD reconhecidos pelo MEC."
+                },
+                {
+                    "@type": "LocalBusiness",
+                    "name": "FASUL - Faculdade de Ensino Superior",
+                    "image": "https://www.fasul.edu.br/images/logo-v2.png",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "Rua Dr. Melo Viana, 75",
+                        "addressLocality": "São Lourenço",
+                        "addressRegion": "MG",
+                        "addressCountry": "BR"
+                    },
+                    "areaServed": "BR",
+                    "priceRange": "R$29,90 - R$329,00",
+                    "url": "https://www.fasul.edu.br"
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {"@type": "ListItem", "position": 1, "name": "FASUL", "item": "https://www.fasul.edu.br"},
+                        {"@type": "ListItem", "position": 2, "name": "Graduação EAD", "item": "https://www.fasul.edu.br/graduacao"},
+                        {"@type": "ListItem", "position": 3, "name": "Pós-Graduação & MBA", "item": "https://www.fasul.edu.br/pos-graduacao"}
+                    ]
+                },
+                {
+                    "@type": "FAQPage",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "Os cursos da FASUL são reconhecidos pelo MEC?",
+                            "acceptedAnswer": {"@type": "Answer", "text": "Sim, todos os cursos de graduação e pós-graduação da FASUL são reconhecidos pelo MEC (Ministério da Educação) e possuem certificação válida em todo o território nacional. Nossos certificados têm o mesmo valor legal que os de instituições presenciais."}
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Quanto tempo leva para receber o certificado?",
+                            "acceptedAnswer": {"@type": "Answer", "text": "Os certificados de pós-graduação são emitidos a partir de 2 meses de conclusão do curso. A graduação segue a carga horária regulamentada pelo MEC, e o diploma é expedido após a conclusão de todos os módulos e aprovação na avaliação final."}
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Posso estudar 100% online?",
+                            "acceptedAnswer": {"@type": "Answer", "text": "Sim! A FASUL oferece modalidade 100% EAD (Ensino a Distância), permitindo que você estude de qualquer lugar do Brasil, no horário que for mais conveniente para você. Nossa plataforma está disponível 24 horas por dia, 7 dias por semana."}
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Qual o valor da mensalidade?",
+                            "acceptedAnswer": {"@type": "Answer", "text": "As mensalidades da graduação EAD começam a partir de R$ 139,00/mês, valores fixos até o final do curso. A taxa única de matrícula é de apenas R$ 29,90. Consulte nossas condições especiais de pagamento e descontos para pagamento antecipado."}
+                        }
+                    ]
+                },
+                {
+                    "@type": "Course",
+                    "name": "Graduação EAD FASUL",
+                    "description": "Cursos de graduação a distância reconhecidos pelo MEC com certificação válida em todo o território nacional.",
+                    "provider": {"@type": "CollegeOrUniversity", "name": "FASUL"},
+                    "courseMode": "online",
+                    "educationalCredentialAwarded": "Certificado de Graduação reconhecido pelo MEC",
+                    "offers": {"@type": "Offer", "price": "139.00", "priceCurrency": "BRL", "availability": "https://schema.org/InStock"}
+                },
+                {
+                    "@type": "Course",
+                    "name": "Pós-Graduação EAD FASUL",
+                    "description": "Mais de 2000 cursos de pós-graduação lato sensu a distância com certificação MEC.",
+                    "provider": {"@type": "CollegeOrUniversity", "name": "FASUL"},
+                    "courseMode": "online",
+                    "educationalCredentialAwarded": "Certificado de Pós-Graduação reconhecido pelo MEC",
+                    "offers": {"@type": "Offer", "price": "139.00", "priceCurrency": "BRL", "availability": "https://schema.org/InStock"}
+                }
+            ]
+        }
+        </script>
 
     <!-- DADOS DOS LINKS DE AFILIADO -->
     <script>
@@ -162,7 +223,7 @@
             <div class="flex items-center justify-between h-16 md:h-20">
                 <a href="/" class="flex-shrink-0" aria-label="Página inicial da FASUL">
                     <div class="w-32 h-10 flex items-center justify-center">
-                        <img src="images/logo-v2.png" alt="Logo FASUL" class="w-full h-full object-contain" />
+                        <img src="images/logo-v2.png" alt="Logo FASUL - Faculdade de Ensino Superior" width="128" height="40" loading="eager" class="w-full h-full object-contain" />
                     </div>
                 </a>
                 <nav class="hidden lg:flex items-center space-x-1" aria-label="Navegação principal">
@@ -249,7 +310,7 @@
                             
                             <!-- Container da Imagem -->
                             <div class="relative w-full h-full rounded-3xl flex items-center justify-center border border-white/10 overflow-hidden shadow-2xl">
-                                <img src="images/Aluno_sorrindo_Hero.webp" alt="Aluno sorrindo usando notebook" class="w-full h-full object-cover" fetchpriority="high">
+                                <img src="images/Aluno_sorrindo_Hero.webp" alt="Aluno sorrindo utilizando notebook durante aula online na plataforma FASUL de educação a distância" width="400" height="500" loading="eager" class="w-full h-full object-cover" fetchpriority="high" />
                             </div>
                             
                             <!-- Badge flutuante -->
@@ -1050,7 +1111,7 @@
       <!-- Card 1: PROUNI -->
       <div class="card">
         <div class="card-image">
-          <img src="images/prouni.webp" alt="Logo PROUNI">
+          <img src="images/prouni.webp" alt="Logo do Programa PROUNI - bolsas de até 100%" width="150" height="100" loading="lazy" />
         </div>
         <div class="card-content">
           <h3>Programa PROUNI</h3>
@@ -1061,7 +1122,7 @@
       <!-- Card 2: FIES -->
       <div class="card">
         <div class="card-image">
-          <img src="images/fies.webp" alt="Logo Novo FIES">
+          <img src="images/fies.webp" alt="Logo Novo FIES - financiamento estudantil" width="150" height="100" loading="lazy" />
         </div>
         <div class="card-content">
           <h3>FIES</h3>
@@ -1072,7 +1133,7 @@
       <!-- Card 3: FASUL -->
       <div class="card">
         <div class="card-image">
-          <img src="images/fasul.webp" alt="Logo Fasul Educacional">
+          <img src="images/fasul.webp" alt="Logo Fasul Educacional - parcelamento sem juros" width="150" height="100" loading="lazy" />
         </div>
         <div class="card-content">
           <h3>Parcelamento da Fasul Educacional</h3>
@@ -1136,7 +1197,7 @@
             <div class="grid md:grid-cols-4 gap-8 md:gap-12">
                 <div class="md:col-span-1">
                     <div class="w-32 h-10 flex items-center justify-center mb-4">
-                        <img src="images/logo-v2.png" alt="Logo FASUL" class="w-full h-full object-contain" />
+                        <img src="images/logo-v2.png" alt="Logo FASUL - Faculdade de Ensino Superior" width="128" height="40" loading="lazy" class="w-full h-full object-contain" />
                     </div>
                     <p class="text-gray-400 text-sm leading-relaxed mb-6">
                         Faculdade de Ensino Superior com mais de 2000 cursos EAD reconhecidos pelo MEC. Transformando vidas através da educação digital.
@@ -1197,9 +1258,7 @@
                     <a href="https://www.weemake.com.br"
                        target="_blank"
                        rel="noopener noreferrer">
-                        <img src="images/WeeMake Dark.png"
-                             alt="WeeMake"
-                             width="230">
+                        <img src="images/WeeMake Dark.png" alt="WeeMake - desenvolvimento web e agência digital" width="230" height="50" loading="lazy">
                     </a>
                 </div>
             </div>
@@ -1525,6 +1584,6 @@
         })();
     </script>
 
-    <script src="js/main.js"></script>
+    <script defer src="js/main.js"></script>
 </body>
 </html>
