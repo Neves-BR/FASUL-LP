@@ -1,6 +1,6 @@
 # FASUL - Faculdade de Ensino Superior
 
-&gt; A FASUL oferece mais de 2000 cursos de graduação e pós-graduação EAD reconhecidos pelo MEC, com preços acessíveis, flexibilidade de horários e certificação válida em todo o território nacional.
+> A FASUL oferece mais de 2000 cursos de graduação e pós-graduação EAD reconhecidos pelo MEC, com preços acessíveis, flexibilidade de horários e certificação válida em todo o território nacional.
 
 ## Graduação EAD
 
